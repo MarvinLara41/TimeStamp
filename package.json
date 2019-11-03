@@ -1,0 +1,20 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "TimeStamp project 3",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarvinLara41/TimeStamp.git"
+  },
+  "author": "Lusi , Dave, Robert, Marvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarvinLara41/TimeStamp/issues"
+  },
+  "homepage": "https://github.com/MarvinLara41/TimeStamp#readme"
+}
