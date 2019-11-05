@@ -2,11 +2,9 @@ import React from "react";
 
 import {Link} from "react-router-dom"
 
-import "./index.css"
+import { Button } from 'semantic-ui-react'
 
-const newStyle = {
-  color:"black"
-}
+import "./index.css"
 
 
 
@@ -17,17 +15,18 @@ function Nav() {
 
       <ul className ="nav-links">
 
-        <Link style={newStyle} to= "/about" >
-        <li>About</li>
-        </Link>
+      <Button as={Link} to="/about">
 
-        <Link style={newStyle}  to ="/contact">
-        <li >Contact</li>
-        </Link>
+        About
+      </Button>
 
-        <Link style={newStyle}  to ="/" >
-        <li>main</li>
-        </Link>
+        <Button as={Link} to="/contact">
+        Contact
+        </Button>
+
+        <Button as={Link} to="/" >
+        main
+        </Button>
       </ul>
     </nav>
   );

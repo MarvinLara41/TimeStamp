@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import "./index.css"
-
-
+// import { Loader } from 'rsuite';
+// import { Form,Button  } from 'semantic-ui-react'
 
 // ***************************************
 // need to alert wen an oput is missing
 
 class Login extends Component {
 
- 
 
     constructor (props){
         super (props)
@@ -49,58 +48,49 @@ class Login extends Component {
 
 
     handleSubmit = event => {
+    
+       
+      
 
-  
+
+
+
+
 
         alert (` Name: ${this.state.name} Password: ${this.state.password} `)
         event.preventDefault()
-
+     
+        
         
         this.setState({    //****************************** */
             name : '',     // clears the value of the input
             password:''    //***************************** */
         });
 
+        
+                
+  
 
     }
-
-
-
-
 
     
     render() { 
         return ( 
        
-                  // <div className="mx-auto">
-                   <div className ="main">
+<form className="main" onSubmit= {this.handleSubmit}  >
+  <div className="field">
+    <label>Email</label>
+    <div className="field"><input type="text" placeholder="joe@schmoe.com" value ={this.state.name} onChange ={this.handleUsernameChange}  /></div>
+  </div>
 
-                     <div className="login_text">
-                       Sign || In
-                     </div>
+  <div className="field">
+    <label>Password</label>
+    <div className="field"><input type="text" placeholder="joe@schmoe.com" value ={this.state.password} onChange ={this.handlePasswordChange}/></div>
+  </div>
+  <button className="btn btn-secondary">Submit
 
-                     <div className="line"> </div>
-
-                   <form onSubmit= {this.handleSubmit} >
-                    <div>
-                    <label >name:</label>
-                    <br />
-                    <input type="text" value ={this.state.name} onChange ={this.handleUsernameChange} />
-                    <br />
-                    <label >password:</label>
-                    <br />
-                    <input type="text" value ={this.state.password} 
-                    onChange ={this.handlePasswordChange}/>
-                    </div>
-                    <br />
-                    <button type ="submit"className="btn btn-success">submit</button>
-                    </form>
-
-                    </div>
- 
-     
-           
-           
+  </button>
+</form>
          );
     }
 }

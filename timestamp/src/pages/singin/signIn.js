@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from '../../components/Form/index'
 import office from "../../components/Form/office.jpg"
-import "../singin/index.css"
+import "./index.css"
 
 
 function SignIn () {

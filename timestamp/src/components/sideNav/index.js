@@ -1,137 +1,53 @@
 import React from "react";
 
-import {Link} from "react-router-dom"
-
-
-import ProfilePic from "./fake.jpeg";
-
 import "./index.css"
 
+// import 'rsuite/lib/styles/index.less'; // or 'rsuite/dist/styles/rsuite-default.css'
 
-function SideNav() {
+
+import { Sidenav, Nav, Icon, Dropdown} from 'rsuite';
+
+
+function SideNavs () {
     return (
-
-
-
-
-
-
-<nav class="main-menu">
-<div class= "picdiv">
-<img src={ProfilePic} className="profile" alt="Smiley face">
-
-</img>
-
-<label>
-
-    User name shoud be here
-
-</label>
-
-</div>
-<ul>
-<Link to ="/">
-    <li>
-        <a href="http://justinfarrow.com">
-            <i class="fa fa-home fa-2x"></i>
-            <span class="nav-text">
+        <div className="side">
+        <div style={{ width: 240 }}>
+        <Sidenav defaultOpenKeys={['3', '4']} activeKey="1">
+          <Sidenav.Body>
+            <Nav>
+              <Nav.Item eventKey="1" icon={<Icon icon="dashboard" />}>
                 Dashboard
-            </span>
-        </a>
-      
-    </li>
-</Link>
+              </Nav.Item>
+              <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
+                User Group
+              </Nav.Item>
+              <Dropdown eventKey="3" title="Advanced" icon={<Icon icon="magic" />}>
+                <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
+                <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
+                <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
+                <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
+              </Dropdown>
+              <Dropdown
+                eventKey="4"
+                title="Settings"
+                icon={<Icon icon="gear-circle" />}
+              >
+                <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
+                <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
+                <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
+                <Dropdown.Item eventKey="3-3">Versions</Dropdown.Item>
+               
+                  <Dropdown.Item eventKey="4-5-1">Action Name</Dropdown.Item>
+                  <Dropdown.Item eventKey="4-5-2">Action Params</Dropdown.Item>
 
+              </Dropdown>
+            </Nav>
+          </Sidenav.Body>
+        </Sidenav>
+        </div>
 
-
-
-    <li class="has-subnav">
-        <a href="#">
-            <i class="fa fa-laptop fa-2x"></i>
-            <span class="nav-text">
-                Stars Components
-            </span>
-        </a>
-        
-    </li>
-    <li class="has-subnav">
-        <a href="#">
-           <i class="fa fa-list fa-2x"></i>
-            <span class="nav-text">
-                PayStubs
-            </span>
-        </a>
-        
-    </li>
-    <li class="has-subnav">
-        <a href="#">
-           <i class="fa fa-folder-open fa-2x"></i>
-            <span class="nav-text">
-                Pages
-            </span>
-        </a>
-       
-    </li>
-    <li>
-        <a href="#">
-            <i class="fa fa-bar-chart-o fa-2x"></i>
-            <span class="nav-text">
-                Graphs and Statistics
-            </span>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <i class="fa fa-font fa-2x"></i>
-            <span class="nav-text">
-               Quotes
-            </span>
-        </a>
-    </li>
-    <li>
-       <a href="#">
-           <i class="fa fa-table fa-2x"></i>
-            <span class="nav-text">
-                Tables
-            </span>
-        </a>
-    </li>
-    <li>
-       <a href="#">
-            <i class="fa fa-map-marker fa-2x"></i>
-            <span class="nav-text">
-                Maps
-            </span>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-           <i class="fa fa-info fa-2x"></i>
-            <span class="nav-text">
-                Documentation
-            </span>
-        </a>
-    </li>
-</ul>
-
-<ul class="logout">
-    <li>
-       <a href="#">
-             <i class="fa fa-power-off fa-2x"></i>
-            <span class="nav-text">
-                Logout
-            </span>
-        </a>
-    </li>  
-</ul>
-</nav>
-
-
-
-
-
-
-);
+        </div>
+)
 }
 
-export default SideNav;
+export default SideNavs;

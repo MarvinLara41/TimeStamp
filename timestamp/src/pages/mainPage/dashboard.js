@@ -1,10 +1,10 @@
 import React from 'react';
 
-import SideNav from "../../components/sideNav/index";
+import SideNavs from "../../components/sideNav/index";
 
-import UserInfo from "../../components/UserInfo/index";
+// import UserInfo from "../../components/UserInfo/index";
 
-import {Container} from "react-bootstrap";
+// import {Container} from "react-bootstrap";
 
 import "./index.css"
 
@@ -18,20 +18,18 @@ function MainPage () {
 
 
 
+<div className= "mainPage">
 
-<>
-<SideNav />
+<SideNavs />
+
+</div>
 
 
-<Container >
-  <div className= "one">
+    // <UserInfo />
 
-    <UserInfo />
 
-  </div>
-</Container>
 
-</>
+
 
 
 
