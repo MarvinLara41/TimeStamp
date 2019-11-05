@@ -14,6 +14,7 @@ return (
   <Card.Body>
 
     <Card.Title>UserInfo</Card.Title>
+    
     <img src="smiley.gif" alt="Smiley face" align="middle"></img>
     <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
     <Card.Text>
