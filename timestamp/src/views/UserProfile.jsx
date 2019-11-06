@@ -51,7 +51,7 @@ class UserProfile extends Component {
                           type: "text",
                           bsClass: "form-control",
                           placeholder: "Company",
-                          defaultValue: "Creative Code Inc.",
+                          defaultValue: "TimeStamp inc.",
                           disabled: true
                         },
                         {

@@ -57,7 +57,7 @@ class Sidebar extends Component {
           )}
         <div className="logo">
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="https://github.com/MarvinLara41/TimeStamp"
             className="simple-text logo-mini"
           >
             <div className="logo-img">
@@ -65,10 +65,10 @@ class Sidebar extends Component {
             </div>
           </a>
           <a
-            href="https://www.creative-tim.com?ref=lbd-sidebar"
+            href="https://github.com/MarvinLara41/TimeStamp"
             className="simple-text logo-normal"
           >
-            Creative Tim
+            TimeStamp
           </a>
         </div>
         <div className="sidebar-wrapper">
