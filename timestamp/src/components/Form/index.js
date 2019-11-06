@@ -22,15 +22,6 @@ class Login extends Component {
     }
 
 
-
-
-    
-  
- 
-
-
-
-    
     handleUsernameChange = (event) => {
           this.setState({
               name : event.target.value
@@ -80,12 +71,12 @@ class Login extends Component {
 <form className="main" onSubmit= {this.handleSubmit}  >
   <div className="field">
     <label>Email</label>
-    <div className="field"><input type="text" placeholder="joe@schmoe.com" value ={this.state.name} onChange ={this.handleUsernameChange}  /></div>
+    <div className="field"><input type="text" placeholder="email" value ={this.state.name} onChange ={this.handleUsernameChange}  /></div>
   </div>
 
   <div className="field">
     <label>Password</label>
-    <div className="field"><input type="text" placeholder="joe@schmoe.com" value ={this.state.password} onChange ={this.handlePasswordChange}/></div>
+    <div className="field"><input type="text" placeholder="password" value ={this.state.password} onChange ={this.handlePasswordChange}/></div>
   </div>
   <button className="btn btn-secondary">Submit
 

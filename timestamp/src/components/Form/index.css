@@ -15,12 +15,13 @@ padding: 2px;
 
   .main {
     margin-left: 100px;
-
+    background-color: #FF4136;
     padding: 70px;
     margin-top: 150px;
     border-radius: 5px;
     height: 300px;
     width: 300px;
+    /* radius */
   }
 
 
