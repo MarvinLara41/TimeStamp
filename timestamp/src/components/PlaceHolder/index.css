@@ -1,0 +1,17 @@
+.boxmain{
+    height: 500px;
+    width: 800px; 
+    margin-left: 450px;
+    margin-top: -630px;
+    background-color: white;
+
+} 
+
+
+.picture1{
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    background-color:blue ;
+    border-radius: 15px;
+}

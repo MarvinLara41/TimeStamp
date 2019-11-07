@@ -1,0 +1,29 @@
+
+.mainPage{
+    background-color: #FF5733;
+    margin-top: -600px;
+    height: 400px;
+}
+
+html{
+    background-color: #FF5733;
+}
+
+
+.topnav{
+    /* margin-left: 100px; */
+    margin-top: 650px;
+
+}
+
+/* the sidebar positioning */
+
+.sidenav{
+    margin-left: 50px;
+    margin-top: 40px;
+    height: 650px;
+}
+
+
+
+
