@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "light-bootstrap-dashboard-react",
   "version": "1.3.0",
   "private": true,
@@ -30,27 +31,52 @@
     "@types/react": "16.8.13",
     "typescript": "3.4.3"
 >>>>>>> 94f521c7e7ce416d267197f70216329603411713
+=======
+  "name": "MERN",
+  "version": "1.0.0",
+  "description": "MERN",
+  "author": "Luis, Robert, David, Marv",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarvinLara41/TimeStamp.git"
+>>>>>>> be3b381d203d08ce46428eedb6e5e6c1bd8bfebf
   },
+  "license": "",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "compile-sass": "node-sass src/assets/sass/light-bootstrap-dashboard-react.scss src/assets/css/light-bootstrap-dashboard-react.css",
-    "minify-sass": "node-sass src/assets/sass/light-bootstrap-dashboard-react.scss src/assets/css/light-bootstrap-dashboard-react.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/sass/light-bootstrap-dashboard-react.scss src/assets/css/light-bootstrap-dashboard-react.css --source-map true"
+    "start": "webpack -p --progress --profile --colors && node server",
+    "start:dev": "node server"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/preset-react": "^7.0.0-beta.42",
+    "autoprefixer": "^8.2.0",
+    "babel-loader": "^8.0.0-beta.2",
+    "bcrypt": "^3.0.6",
+    "connect-history-api-fallback": "^1.5.0",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "express": "^4.16.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.1.0",
+    "mongoose": "^5.0.11",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.17.2",
+    "postcss-loader": "^2.1.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-middleware": "^3.0.1",
+    "webpack-hot-middleware": "^2.21.2",
+    "webpack-merge": "^4.1.2"
   }
 }
