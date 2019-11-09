@@ -16,24 +16,24 @@
 
 */
 import React, { Component } from "react";
-import ChartistGraph from "react-chartist";
-import { Grid, Row, Col } from "react-bootstrap";
-
+import { Grid, Row, Col, Button, FormGroup,ControlLabel, FormControl } from "react-bootstrap";
+import { Clock } from "../components/Clock/Clock"
 import { Card } from "components/Card/Card.jsx";
 import { StatsCard } from "components/StatsCard/StatsCard.jsx";
 import { Tasks } from "components/Tasks/Tasks.jsx";
-import {
-  dataPie,
-  legendPie,
-  dataSales,
-  optionsSales,
-  responsiveSales,
-  legendSales,
-  dataBar,
-  optionsBar,
-  responsiveBar,
-  legendBar
-} from "variables/Variables.jsx";
+import { FormInputs } from "components/FormInputs/FormInputs.jsx";
+// import {
+//   dataPie,
+//   legendPie,
+//   dataSales,
+//   optionsSales,
+//   responsiveSales,
+//   legendSales,
+//   dataBar,
+//   optionsBar,
+//   responsiveBar,
+//   legendBar
+// } from "variables/Variables.jsx";
 
 class Dashboard extends Component {
   createLegend(json) {
@@ -48,122 +48,118 @@ class Dashboard extends Component {
   }
   render() {
     return (
-      <div className="content">
+      <div>
         <Grid fluid>
           <Row>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-server text-warning" />}
-                statsText="Capacity"
-                statsValue="105GB"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-wallet text-success" />}
-                statsText="Revenue"
-                statsValue="$1,345"
-                statsIcon={<i className="fa fa-calendar-o" />}
-                statsIconText="Last day"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="pe-7s-graph1 text-danger" />}
-                statsText="Errors"
-                statsValue="23"
-                statsIcon={<i className="fa fa-clock-o" />}
-                statsIconText="In the last hour"
-              />
-            </Col>
-            <Col lg={3} sm={6}>
-              <StatsCard
-                bigIcon={<i className="fa fa-twitter text-info" />}
-                statsText="Followers"
-                statsValue="+45"
-                statsIcon={<i className="fa fa-refresh" />}
-                statsIconText="Updated now"
+            <Col md = {6} sm={12}>
+              <StatsCard style={{ width: 'center' }}
+                bigIcon={<i className="pe-7s-timer text-success" />}
+                statsText="Time"
+                statsValue= {<Clock></Clock>}
+                statsButton={<Button>Clock in</Button>}
+
               />
             </Col>
           </Row>
           <Row>
-            <Col md={8}>
+          <Col md={6}>
               <Card
-                statsIcon="fa fa-history"
-                id="chartHours"
-                title="Users Behavior"
-                category="24 Hours performance"
-                stats="Updated 3 minutes ago"
+                title="Your Profile"
                 content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataSales}
-                      type="Line"
-                      options={optionsSales}
-                      responsiveOptions={responsiveSales}
+                  <form>
+                    <FormInputs
+                      ncols={["col-md-12"]}
+                      properties={[
+                        {
+                          label: "Company (disabled)",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Company",
+                          defaultValue: "TimeStamp inc.",
+                          disabled: true
+                        },
+                      ]}
                     />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendSales)}</div>
-                }
-              />
-            </Col>
-            <Col md={4}>
-              <Card
-                statsIcon="fa fa-clock-o"
-                title="Email Statistics"
-                category="Last Campaign Performance"
-                stats="Campaign sent 2 days ago"
-                content={
-                  <div
-                    id="chartPreferences"
-                    className="ct-chart ct-perfect-fourth"
-                  >
-                    <ChartistGraph data={dataPie} type="Pie" />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendPie)}</div>
-                }
-              />
-            </Col>
-          </Row>
+                    <FormInputs
+                      ncols={["col-md-6", "col-md-6"]}
+                      properties={[
+                        {
+                          label: "First name",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "First name",
 
-          <Row>
-            <Col md={6}>
-              <Card
-                id="chartActivity"
-                title="2014 Sales"
-                category="All products including Taxes"
-                stats="Data information certified"
-                statsIcon="fa fa-check"
-                content={
-                  <div className="ct-chart">
-                    <ChartistGraph
-                      data={dataBar}
-                      type="Bar"
-                      options={optionsBar}
-                      responsiveOptions={responsiveBar}
+                        },
+                        {
+                          label: "Last name",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Last name",
+                        }
+                      ]}
                     />
-                  </div>
-                }
-                legend={
-                  <div className="legend">{this.createLegend(legendBar)}</div>
+                    <FormInputs
+                      ncols={["col-md-12"]}
+                      properties={[
+                        {
+                          label: "Adress",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Home Adress"
+                        }
+                      ]}
+                    />
+                    <FormInputs
+                      ncols={["col-md-4", "col-md-4", "col-md-4"]}
+                      properties={[
+                        {
+                          label: "City",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "City",
+                        },
+                        {
+                          label: "Country",
+                          type: "text",
+                          bsClass: "form-control",
+                          placeholder: "Country",
+                        },
+                        {
+                          label: "Postal Code",
+                          type: "number",
+                          bsClass: "form-control",
+                          placeholder: "ZIP Code"
+                        }
+                      ]}
+                    />
+
+                    <Row>
+                      <Col md={12}>
+                        <FormGroup controlId="formControlsTextarea">
+                          <ControlLabel>About Me</ControlLabel>
+                          <FormControl
+                            rows="5"
+                            componentClass="textarea"
+                            bsClass="form-control"
+                            placeholder="Here can be your description"
+                          />
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                    <div className="clearfix" />
+                  </form>
                 }
               />
             </Col>
-
+           
             <Col md={6}>
-              <Card
+              <Card style
                 title="Tasks"
                 category="Backend development"
                 stats="Updated 3 minutes ago"
                 statsIcon="fa fa-history"
                 content={
-                  <div className="table-full-width">
+                  <div className="w-100 p-3">
                     <table className="table">
                       <Tasks />
                     </table>

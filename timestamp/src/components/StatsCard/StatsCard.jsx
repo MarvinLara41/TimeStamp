@@ -24,12 +24,12 @@ export class StatsCard extends Component {
       <div className="card card-stats">
         <div className="content">
           <Row>
-            <Col xs={5}>
+            <Col md={1}>
               <div className="icon-big text-center icon-warning">
                 {this.props.bigIcon}
               </div>
             </Col>
-            <Col xs={7}>
+            <Col md={10}>
               <div className="numbers">
                 <p>{this.props.statsText}</p>
                 {this.props.statsValue}
@@ -38,8 +38,8 @@ export class StatsCard extends Component {
           </Row>
           <div className="footer">
             <hr />
-            <div className="stats">
-              {this.props.statsIcon} {this.props.statsIconText}
+            <div className="button">
+              {this.props.statsButton}
             </div>
           </div>
         </div>
