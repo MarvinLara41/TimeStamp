@@ -1,49 +1,3 @@
-<<<<<<< HEAD
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
-
-const UserSchema = new Schema({
-  firstName: {
-    type: String,
-    default: ""
-  },
-
-  lastName: {
-    type: String,
-    default: ""
-  },
-
-  email: {
-    type: String,
-    default: ""
-  },
-
-  password: {
-    type: String,
-    default: ""
-
-  },
-
-  inCome: {
-    type: String,
-    default: ""
-  }
-
-  
-
-
-
-
-
-
-
- 
-});
-
-
-
-module.exports = mongoose.model("User", UserSchema);
-=======
 const mongoose = require('mongoose'); 
 const bcrypt = require('bcrypt');
 
@@ -89,4 +43,3 @@ UserSchema.methods.validPassword = function(password){
 
 const user = mongoose.model('User', UserSchema);
 module.exports = user;
->>>>>>> 5cab01adf7e4ede6177e01900162129f280c4e04
