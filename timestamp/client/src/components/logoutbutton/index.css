@@ -1,0 +1,41 @@
+.signout{
+    text-decoration: none;
+    border: none;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    margin: 0;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    border: hidden;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 10px 50px 6px -6px black;
+         box-shadow: 10px 8px 6px -6px black;
+}
+
+
+
+
+.signout:hover,
+.signout:focus {
+    background: #90EE90;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    border: hidden;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 10px 50px 6px -6px black;
+         box-shadow: 50px 8px 20px 6px black;
+}
+
+.signout:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.signout:active {
+    transform: scale(0.99);
+    text-decoration: none;
+}
+

@@ -1,0 +1,37 @@
+.main{
+    /* background-color: #90EE90; */
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    border-radius: 2px;
+    margin: auto;
+    padding: 50px;
+    opacity: .8;
+    -webkit-box-shadow: 0 8px 6px -7px black;
+    -moz-box-shadow: 15px 8px 6px -7px black;
+         box-shadow: 1px 4px 6px 7px black;
+
+
+  background: inherit;
+  border-radius: 2px;
+  overflow: hidden;
+
+
+
+    }
+
+
+
+.message{
+    font-size: small;
+    color: rgb(245, 88, 88);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+}
+
+
+/* 
+    .sudmit1{
+        margin-left: 100px;
+     
+    } */

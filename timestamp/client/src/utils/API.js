@@ -23,8 +23,30 @@ export default {
   pay_Stub: function() {
     return axios.post("/paystub");
   },
-  signIn: function() {
-    return axios.post("/signIn");
+  signIn:function (type, callback) {
+    
+
+    // console.log("type",type.password )
+
+    let URL = "/api/signIn/account/signIn"     // change to sign in
+
+    axios.post(URL, {                   //Robert 
+      email: type.email,               //login route
+      password: type.password
+    }).then(function (response) {
+
+    // console.log(response)
+  
+
+
+
+callback(response)
+
+    }).catch(function (error) {
+      console.log(error)
+    })
+
+    
   },
   sign_Up: function() {
     return axios.post("/signup");

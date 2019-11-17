@@ -1,0 +1,26 @@
+/* html{
+    background-color: rgb(219, 219, 219);
+    
+} */
+
+body{
+height: 100%;
+/* background-color: #90EE90; */
+
+  }
+
+
+.center1{
+    
+    height: 500px;
+    width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+}
+
+
+
