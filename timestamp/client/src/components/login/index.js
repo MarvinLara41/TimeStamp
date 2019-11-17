@@ -51,7 +51,17 @@ API.signIn(this.state, (callback) => {
   console.log(callback.data)
   this.setState({message:callback.data})
 
-  // this.props.history.push("/dashboard")
+
+ 
+
+  localStorage.setItem("token", callback.data.token);
+  
+
+  if(callback.data.token && callback.data.message) {
+    this.props.history.push('/dashbooard');
+ console.log("hello")
+  }
+
 
 
 } )

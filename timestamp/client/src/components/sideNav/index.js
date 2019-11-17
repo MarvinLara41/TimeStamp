@@ -26,6 +26,9 @@ class SideNav extends Component {
     //     .then(res => res.json())
     //     .then(customers => this.setState(({customers}), () => console.log("customers fetched...", customers)));
          
+
+    
+    // localStorage.getItem(key);
     // }
  
 
