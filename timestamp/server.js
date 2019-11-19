@@ -16,17 +16,15 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-// Add routes, both API and view
+// Add routes, both API and vie
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://timestamp:Code123@ds241308.mlab.com:41308/heroku_sjzbcq3h", () => {
-  console.log('Connected to DB')
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://timestamp:Code123@ds241308.mlab.com:41308/heroku_sjzbcq3h",() => {console.log("Connected to database")});
 
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
 
-module.exports = app;
+module.exports = app

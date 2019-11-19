@@ -10,6 +10,7 @@ const signIn = require('./signIn');
 const signUp =require('./signUp');
 const verify = require('./verify');
 const logOut = require('./logOut');
+const email = require('./email');
 
 // routes
 router.use("/paystub", payStub);
@@ -21,6 +22,6 @@ router.use("/signIn", signIn);
 router.use("/signup", signUp);
 router.use("/verify", verify);
 router.use("/logOut", logOut);
-
+router.use("/email", email);
 
 module.exports = router;
