@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 const routes = require('./routes');
 
 
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://timestamp:Code123@ds241308.mlab.com:41308/heroku_sjzbcq3h",() => {console.log("Connected to database")});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://timestamp:Code123@ds241308.mlab.com:41308/heroku_sjzbcq3h")
 
 // Start the API server
 app.listen(PORT, function() {

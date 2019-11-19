@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import API from '../utils/API'
 
 
-class Email extends Component {f
+class Email extends Component {
     constructor(props) {
       super(props);
   
@@ -20,9 +20,6 @@ class Email extends Component {f
       this.onSend = this.onSend.bind(this);
     }
   
-    componentDidMount() {
-      
-    }
    
    // ************ Theses are the events binded inside the constructor *************
     onTextboxChangeSignEmail(event){
@@ -56,7 +53,7 @@ class Email extends Component {f
             if(callback.data.success){
                 console.log('message sent')
             }else{
-              console.log("error sending emai");
+              console.log("error sending email");
               
               
               }
@@ -76,30 +73,31 @@ class Email extends Component {f
         return(
         <div>
   
-              <div className='signIn'>
-                <p>Send an Email</p>
-                    <form onSubmit={this.onSend}> 
-                  <input 
-                  type="Email"
-                  placeholder="Email" 
-                  value={signEmail}
-                  onChange={this.onTextboxChangeSignEmail}
-                  />
+              <div className='sendEmail'>
+                <h1>Send an Email Bitch</h1>
+                  <form onSubmit={this.onSend}> 
+                    <input 
+                          type="Email"
+                          placeholder="Email" 
+                          value={signEmail}
+                          onChange={this.onTextboxChangeSignEmail}
+                    />
                   <br />
-                  <input 
-                  type='message' 
-                  placeholder='message' 
-                  value={signMessage}
-                  onChange={this.onTextboxChangeSignMessage} 
-                  />
+                    <input 
+                          type='message' 
+                          placeholder='message' 
+                          value={signMessage}
+                          onChange={this.onTextboxChangeSignMessage} 
+                    />
                   <br />
-                  <button onClick={this.onSend}>Send Email</button>
+                    <button onClick={this.onSend}>Send Email</button>
                   </form>
               </div>
         </div>
       )
     }
-  }
-  
+}
+  exports.signMessage = message;
+  exports.signEmail = email;
   export default Email;
   

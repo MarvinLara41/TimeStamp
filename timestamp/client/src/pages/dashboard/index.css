@@ -1,0 +1,31 @@
+
+
+ 
+
+
+
+.main1{
+    /* background: #F9F9F9; */
+
+    height: 717px;
+    background: #4CAF50;
+
+}
+
+
+.logout{
+
+    margin-left: 90%;
+    border-radius: 30px;
+    margin-top:15px ;
+    margin-bottom: -40px;
+
+}
+
+
+.table1main{
+    margin-top: 50px;
+    margin-left: 350px;
+    max-width: 1000px;
+
+}

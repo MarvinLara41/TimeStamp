@@ -1,8 +1,9 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config')
 
+
+
 module.exports = {        
-       
     sendEmail:function(req, res){    
         //transporter allows me to send emails via Gmail  
         //email and password are hidden 
@@ -16,12 +17,12 @@ module.exports = {
 
         // var subject = '';
         //message is what the reciever will recieve 
+                
         var message = {
             from: config.email,
             to: config.reciever,
-            subject: 'hey this is from stamptime6',
-            text: 'fuck bitches get money',
-            html: '<p>HTML version of the message</p>'
+            subject: 'Meeting Event',
+            html: text,
         };
 
         //sendMail is picking out any errors in the processs
