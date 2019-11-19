@@ -7,39 +7,29 @@
 
  
 .sidemain{
-    /* background-color: red; */
+  background: #F9F9F9;
     width: 300px;
     height: 600px;
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 30px;
+    margin-left: 20px;
     border-radius: 5px;
-    /* background-color: red; */
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0px 8px 6px -6px black;
-         box-shadow: 10px 8px 6px -6px black;
 
-  position: relative;
+    float:left;
 
-
+overflow: auto;
+    opacity: .9;
 }
 
-/* .cardmain{
-    width: 300px;
-    background-color: #394263;
-    border-radius: 50%;
-
-} */
 
 .picture{
-    background-color: #c2cffd;
-    border-radius: 50%;
-    height: 200px;
+  background: #F9F9F9;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    /* border-radius: 50%; */
     width: 230px;
-    margin-left: 20px;
-    border: hidden;
-    -webkit-box-shadow: 20px 18px 16px 26px black;
-    -moz-box-shadow: 20px 8px 6px 61px black;
-    box-shadow: 10px 8px 6px -6px black;
+    margin-left: 30px;
+    opacity: .9;
+    margin-top: 35px;
+
 
 
 }
@@ -59,9 +49,9 @@
 
   /* border-radius: 20px; */
 
-    height: 360px;
+    height: 350px;
     width: 300px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     transform: translateX(-245px);
     transition: all .6s ease-in-out;
     box-shadow: 0 5px 20px 0 rgba(65, 32, 32, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);

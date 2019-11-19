@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 
-// import axios from "axios";
-
-// import { Table } from 'react-bootstrap';
-
 import "./index.css"
 
-
-
 import { Inject,ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, EventSettingsModel } from "@syncfusion/ej2-react-schedule";
+
+
 
 
 
@@ -61,20 +57,7 @@ class Table1 extends Component {
 
 
   //   componentDidMount(){
-  //     // Optionally the request above could also be done as
-  //  axios.get('/user', {
-  //    params: {
-  //      ID: 12345
-  //    }
-  //  })
-  //  .then(function (response) {
-  //    console.log(response);
-   
-  //  //   this.setState({
-  //  //     info:response
-  //  //  })
-   
-  //  })
+
   // }
 
 

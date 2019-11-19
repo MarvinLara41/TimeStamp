@@ -8,6 +8,7 @@ import API from "../../utils/API";
 
 
 import "./index.css"
+// import { response } from 'express';
 // import { ca } from 'date-fns/locale';
 
 class FormMain extends Component {
@@ -20,7 +21,7 @@ class FormMain extends Component {
         email: '',
         password: '',
         message: {}
-
+        ,loggedIn: null
      }
 
      this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -47,67 +48,64 @@ handlePasswordChange(e){
 submitForm(e){
   e.preventDefault()
 
+
+
+
 API.signIn(this.state, (callback) => {
   console.log(callback.data)
   this.setState({message:callback.data})
+  localStorage.setItem("token", callback.data.token);
+
+  if(callback.data.success){
+    this.setState({loggedIn:true})
+    console.log("dlfhois",this.state.loggedIn )
+  }
+
+  // if(this.state.loggedIn) {
+  //   this.props.handleSuccessfulAuth(callback)
+  // }
+
+// devrobert@timestamp.com
 
 
  
 
-  localStorage.setItem("token", callback.data.token);
-  
-
-  if(callback.data.token && callback.data.message) {
-    this.props.history.push('/dashbooard');
- console.log("hello")
-  }
-
-
 
 } )
-
-
-
-// console.log(user);
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
 
 
 
-
+// devrobert@timestamp.com
 
 
     render() { 
 
+      
 
         return ( 
 <div className = "main">
 
 <h1>Login</h1>
 
+
 <div className="mx-auto">
-           
+    
+         
            <form onSubmit= {this.submitForm} >
             <div>
 
-              <div className="message">{this.state.message.message}</div>
+              <div className="message">
+                {this.state.message.message}
+                <hr />
+                </div>
             <label >email:</label>
-            <input type="text" value ={this.state.email} onChange ={this.handleEmailChange} />
-            <br />
+            <input className="field" type="text" value ={this.state.email} onChange ={this.handleEmailChange} />
+           
             <label >password:</label>
-            <input type="password" value ={this.state.password} 
+            <input className="field" type="password" value ={this.state.password} 
             onChange ={this.handlePasswordChange} />
             </div>
             <br />

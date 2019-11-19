@@ -8,17 +8,15 @@ import "./index.css"
 
 
 class LogOutButton extends Component {
-    constructor(props) {
-        super(props);
-         localStorage.removeItem("token")
-    }
+
+        //  localStorage.removeItem("token")
     render() { 
         return ( 
 
-            <button  type="button" value="Button" className="signout">
+            <div type="button" value="Button" className="signout">
                <Link to="/"> signout</Link> 
                 
-                </button>
+                </div>
 
          );
     }

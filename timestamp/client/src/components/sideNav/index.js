@@ -3,7 +3,7 @@ import React, {Component } from 'react';
 // import API from "../../utils/API";
 
 
-import { Card, CardImg, CardBody,  CardSubtitle} from 'reactstrap';
+import { Card,  CardBody, CardImg,  CardSubtitle } from 'reactstrap';
 
 
 import Instagram from './FakeImages/instagram.png';
@@ -14,7 +14,7 @@ class SideNav extends Component {
     constructor() {
         super();
         this.state = { 
-              customers: []
+              // customers: []
          }
     }
 
@@ -48,7 +48,12 @@ class SideNav extends Component {
       <Card >
         <CardImg src={Instagram} alt="Logo" className="picture" alt="Card image cap" />
         <CardBody>
-          <CardSubtitle>User name can go here</CardSubtitle>
+          <CardSubtitle>
+            <ul />
+            User name can go here
+
+
+          </CardSubtitle>
         </CardBody>
       </Card>
     </div>

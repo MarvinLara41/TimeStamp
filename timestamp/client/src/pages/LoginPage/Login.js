@@ -4,14 +4,30 @@ import FormMain from "../../components/login"
 
 import NavMain from "../../components/topNav/index"
 
+// import { Redirect} from "react-router-dom";
+
+// devrobert@timestamp.com
+
 import "./index.css"
 
 class Login extends Component {
-    state = {  }
+
+    
+    state = { 
+        // token:localStorage.getItem("token")
+     }
     render() { 
+
+   
+
+      
+
+
+
+
         return ( 
 
-<>
+<div className= "wall">
              <div className="nav_top">
 
                 <NavMain/>
@@ -24,7 +40,7 @@ class Login extends Component {
             <FormMain />
 
             </div>
-</>
+</div>
          );
     }
 }

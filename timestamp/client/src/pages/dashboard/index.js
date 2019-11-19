@@ -2,17 +2,17 @@ import React, {Component } from 'react';
 
 // import {Redirect} from 'react-router-dom';
 
-import NavMain from "../../components/topNav/index"
+import NavMain from "../../components/topNav/index";
 
-import LogOutButton from "../../components/logoutbutton/index"
+import LogOutButton from "../../components/logoutbutton/index";
 
-import Table1 from "../../components/table1/table"
+import Table1 from "../../components/table1/table";
 
-import SideNav from "../../components/sideNav/index"
+import SideNav from "../../components/sideNav/index";
 
+import Card from "../../components/card1/index"
 
-import "./index.css"
-
+import "./index.css";
 
 class DashBoard extends Component {
     
@@ -22,7 +22,8 @@ constructor(props){
 
 
     this.state ={
-        user:undefined
+        // token:localStorage.getItem("token")
+
     }
 
 
@@ -50,14 +51,25 @@ constructor(props){
 
     render() { 
 
+
+
+
         return ( 
 
 <div className="main1">
+
 
 <div>
     <NavMain />
 
 </div>
+
+
+
+<div>
+    <Card />
+</div>
+
 
 <div className ="logout">
 <LogOutButton />
