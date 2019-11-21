@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import Login from "./pages/LoginPage/Login";
 
 import DashBoard from "./pages/dashboard/index";
+import Clockin from "./pages/Clockin/Clockin"
 
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
+
 
 
 
@@ -67,8 +69,9 @@ render() {
     <Router>
       <div>
         <Switch>
-        <Route exact  path="/"  component ={Login} />}  />
+        <Route exact  path="/"  component ={Login} />
         <PrivateRoute exact  path="/dashboard" component={DashBoard}  />
+        <Route path = "/Clockin" component = {Clockin} />
         </Switch>
       </div>
     </Router>

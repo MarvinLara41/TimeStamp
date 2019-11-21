@@ -1,9 +1,12 @@
 import React from "react"
-import Clock from "./Clock"
+import Clock from "../Clock/Clock"
+import Punch from "../Dropdown/Dropdown"
+import { Button } from "react-bootstrap"
 
 
 function Card(){
     return(
+      
         <div className ="container">
         <div className="card text-center">
         <div className="card-header">
@@ -12,13 +15,15 @@ function Card(){
         <div className="card-body">
           <h2 className="card-title">Time</h2>
          <h2><Clock /></h2>
-          <a href="#" class="btn btn-success">Clock in</a>
+          <div><Punch /></div>
         </div>
+        <Button variant="success">Punch</Button>
         <div className="card-footer text-muted">
          
         </div>
       </div>
       </div>
+   
      
     )
 }

@@ -1,4 +1,5 @@
 import React from "react"
+import "./RecentPunches.css"
 const Recent = props => {
     return(
         <div className = "container">

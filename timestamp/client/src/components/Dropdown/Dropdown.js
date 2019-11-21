@@ -1,59 +1,25 @@
-import React, { Component } from 'react';
-import './style.css';
+import React from 'react';
+import "./Dropdown.css"
 
 
-class Dropdown extends Component {
-constructor(){
- super();
 
- this.state = {
-       displayMenu: false,
-     };
 
-  this.showDropdownMenu = this.showDropdownMenu.bind(this);
-  this.hideDropdownMenu = this.hideDropdownMenu.bind(this);
+const templates = [{ 'id': 1, 'value': 'Clock in' }, { 'id': 2, 'value': 'Break out' } , {"id" : 3 , 'value' : "Break in"}, {"id" : 4 , 'value' : "Lunch Out"}, {"id" : 5 , 'value' : "Lunch In"} , {"id" : 6 , 'value' : "Clock Out"}]
 
-};
+const Punch = () => (
+  <div className = "container">
+    <select className="form-control">
+      {
+        templates.map(msgTemplate => {
+          return (
+            <option key={msgTemplate.id} value={msgTemplate.value}>
+              {msgTemplate.value}
+                        </option>
+          )
+        })
+      }
+    </select>
+  </div>
+);
 
-showDropdownMenu(event) {
-    event.preventDefault();
-    this.setState({ displayMenu: true }, () => {
-    document.addEventListener('click', this.hideDropdownMenu);
-    });
-  }
-
-  hideDropdownMenu() {
-    this.setState({ displayMenu: false }, () => {
-      document.removeEventListener('click', this.hideDropdownMenu);
-    });
-
-  }
-
-  render() {
-    return (
-        <div  className="dropdown" style = {{background:"green",width:"200px"}} >
-         <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
-
-          { this.state.displayMenu ? (
-          <ul>
-         <li><a className="active" href="#Create Page">Create Page</a></li>
-         <li><a href="#Manage Pages">Manage Pages</a></li>
-         <li><a href="#Create Ads">Create Ads</a></li>
-         <li><a href="#Manage Ads">Manage Ads</a></li>
-         <li><a href="#Activity Logs">Activity Logs</a></li>
-         <li><a href="#Setting">Setting</a></li>
-         <li><a href="#Log Out">Log Out</a></li>
-          </ul>
-        ):
-        (
-          null
-        )
-        }
-
-       </div>
-
-    );
-  }
-}
-
-export default Dropdown;
+export default Punch
