@@ -14,3 +14,4 @@ const clockInSchema = new mongoose.Schema({
 const clockIn = mongoose.model('ClockIn', clockInSchema);
 
 module.exports= clockIn;
+

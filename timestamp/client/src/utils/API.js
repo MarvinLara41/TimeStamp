@@ -2,6 +2,9 @@ import axios from "axios";
 
 export default {
   // Gets all books
+  calendar: function() {
+    return axios.post("/calendar");
+  },
   clock_In: function() {
     return axios.post("/api/account/clockin");
   },
