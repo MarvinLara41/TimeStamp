@@ -2,9 +2,19 @@ const nodemailer = require('nodemailer');
 const config = require('../config/config')
 
 
+const getEmailData = (email, message) => {
+         data = {
+            from: config.email,
+            to:email,
+            subject: `Hello`,
+            html: message
+        }
+        return data;
+}
+
 
 module.exports = {        
-    sendEmail:function(req, res){    
+    sendEmail:function(email, message){    
         //transporter allows me to send emails via Gmail  
         //email and password are hidden 
         let transporter = nodemailer.createTransport({
@@ -15,20 +25,11 @@ module.exports = {
             }
         })
 
-        // var subject = '';
-        //message is what the reciever will recieve 
-                
-        var message = {
-            from: config.email,
-            to: config.reciever,
-            subject: 'Meeting Event',
-            html: text,
-        };
-
-        //sendMail is picking out any errors in the processs
-        transporter.sendMail(message, (err, info)=> {
-            console.log('err', err);
-            console.log('info', info);
+       const mail = getEmailData(email, message)
+      
+        transporter.sendMail(mail, function (err, info) {
+         console.log('err', err);
+         console.log('info', info);
 
             res.send({
                 success: true,
@@ -36,9 +37,6 @@ module.exports = {
             })
             transporter.close();
         })
-        
-
     }
 }
- 
         

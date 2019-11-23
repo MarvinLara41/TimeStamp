@@ -1,53 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import API from '../utils/API'
+import axios from 'axios';
 
+function Email () {
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-class Email extends Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        //this is needed for loging into the account
-        signEmail: '',
-        signMessage: ''
-      };
-  
-      this.onTextboxChangeSignEmail = this.onTextboxChangeSignEmail.bind(this)
-      this.onTextboxChangeSignMessage=this.onTextboxChangeSignMessage.bind(this)
-  
-  
-      //onSignIn allows me to connect to backend to allow access to the account
-      this.onSend = this.onSend.bind(this);
+    const handleClick = (e) => {
+      e.preventDefault();
+
+      if(e.target.id === "email"){
+       setEmail({[e.target.email]: e.target.value})
+      }else if (e.target.id === "message"){
+       setMessage({[e.target.message]: e.target.value})
+      }
     }
-  
-   
-   // ************ Theses are the events binded inside the constructor *************
-    onTextboxChangeSignEmail(event){
-      this.setState({
-        signEmail: event.target.value
-      });
-  
-    }
-  
-    onTextboxChangeSignMessage(event){
-      this.setState({
-        signMessage: event.target.value
-      });
-  
-    }
-  
   
     
-    onSend(e){
-      e.preventDefault()
-      
-        //grab state 
-      const {
-        signEmail,
-        signMessage,
-      }= this.state;
-      //sign in connected to backend
-        API.sendEmail(this.state, (callback) => {
+   const onSend= (e) => {
+      e.preventDefault();
+
+     API.sendEmail(this.state, (callback) => {
             console.log(callback.data)
             this.setState({message: callback.data});
             if(callback.data.success){
@@ -57,47 +30,38 @@ class Email extends Component {
               
               
               }
-            }
-          )
-    }
+            })
+  }
   
   
-   render() {
-  
-      const {
-        signEmail,
-        signMessage,
-  
-      } = this.state;
   
         return(
         <div>
   
               <div className='sendEmail'>
                 <h1>Send an Email Bitch</h1>
-                  <form onSubmit={this.onSend}> 
+                  <form onSubmit={onSend}> 
                     <input 
+                          id= "email"
                           type="Email"
                           placeholder="Email" 
-                          value={signEmail}
-                          onChange={this.onTextboxChangeSignEmail}
+                          value={email}
+                          onChange={handleClick}
                     />
                   <br />
                     <input 
+                          id='message'
                           type='message' 
                           placeholder='message' 
-                          value={signMessage}
-                          onChange={this.onTextboxChangeSignMessage} 
+                          value={message}
+                          onChange={handleClick} 
                     />
                   <br />
-                    <button onClick={this.onSend}>Send Email</button>
+                    <button onClick={onSend}>Send Email</button>
                   </form>
               </div>
         </div>
       )
-    }
 }
-  exports.signMessage = message;
-  exports.signEmail = email;
   export default Email;
   

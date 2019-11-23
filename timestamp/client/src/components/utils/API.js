@@ -33,8 +33,9 @@ export default {
     return axios.get("/verify");
   },
 
-  sendEmail:function (type, callback) {
-  let URL = "/api/email/email"     // email api route
+
+ sendEmail:function (type, callback) {
+  let URL = "/api/email/email"     // email api route sent to client
 
     axios.post(URL, {                    
            email: type.email,               
@@ -45,21 +46,30 @@ export default {
     }).catch(function (error) {
       console.log(error)
     })
-  },
+  }
 
-  sendMeeting:function (type, callback) {
-    let URL = "/api/meeting/meeting"     // email api route
-  
-      axios.post(URL, {                    
-             email: type.email,               
-             message: type.message
-      }).then(function (response) {
-  
-      callback(response)
-      }).catch(function (error) {
-        console.log(error)
-      })
-    }
+
+// sendEmail:function(name, email, message) {
+//   fetch('/api/email/email', {
+//     method: 'POST',
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       name: name,
+//       email: email,
+//       message: message
+//     })
+//   })
+//   .then((res) => res.json())
+//   .then((res) => {
+//     console.log('here is the response: ', res);
+//   })
+//   .catch((err) => {
+//     console.error('here is the error: ', err);
+//   })
+//  }
   
 };
 
