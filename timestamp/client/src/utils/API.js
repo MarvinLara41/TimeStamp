@@ -16,12 +16,20 @@ export default {
   in_Surance: function() {
     return axios.post("/api/account/insurance");
   },
+
+  interview: function() {
+    return axios.post("/interview");
+  },
   // Saves a book to the database
   log_Out: function() {
     return axios.get("/logOut");
   },
   Me_etings: function() {
     return axios.post("/meeting");
+  },
+
+  meetUp: function() {
+    return axios.post("/meetup");
   },
   pay_Stub: function() {
     return axios.post("/paystub");
