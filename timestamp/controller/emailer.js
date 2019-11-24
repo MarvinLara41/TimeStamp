@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config')
 const sendMail = require('../models/sendMail')
-
+const xoauth2 = require('xoauth2')
 
 
        
@@ -12,11 +12,9 @@ module.exports ={
 
         let transporter = nodemailer.createTransport({
                 service: 'gmail',
-                port: 465,
-                secure: true,
                 auth: {
-                    type: 'OAuth2',
                     user: config.email,
+                    pass: config.password,
                     clientId: config.clientId,
                     clientSecret: config.clientSecret,
                     refreshToken: config.refreshToken,
@@ -24,22 +22,22 @@ module.exports ={
                 }
 });
 
-        const htmlEmail = `
-        <ul>
-                <li>Subject: ${req.body.subject}</li>
-                <li>Email: ${req.body.email} </;i>
-        <ul>
-        <h3> Message<h3>
-        <p>${req.body.message}</li>
-        `
+        // const htmlEmail = `
+        // <ul>
+        //         <li>Subject: ${req.body.subject}</li>
+        //         <li>Email: ${req.body.email} </;i>
+        // <ul>
+        // <h3> Message<h3>
+        // <p>${req.body.message}</li>
+        // `
 
 
         const mail = {
                 from: config.email,
                 subject: req.body.subject,
                 to: req.body.email,
-                text: `${req.body.message}`,
-                html: `${req.body.message}`
+                text: req.body.message,
+                // html: req.body.message
         }
 
 

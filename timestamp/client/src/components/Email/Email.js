@@ -11,14 +11,24 @@ class Email extends Component {
             message: ''
         }
 
-        this.handleChange= this.handleChange.bind(this)
+        this.handleChangeSubject= this.handleChangeSubject.bind(this)
+        this.handleChangeEmail= this.handleChangeEmail.bind(this)
+        this.handleChangeMessage= this.handleChangeMessage.bind(this)
         this.handleSubmit =this.handleSubmit.bind(this)
+        
     }
 
-    handleChange = (e) => {
-        this.setState({[e.target.subject]: e.target.value})
-        this.setState({[e.target.email]: e.target.value})
-        this.setState({[e.target.message]: e.target.value})
+    handleChangeSubject = (e) => {
+        this.setState({subject: e.target.value})
+      
+    }
+
+     handleChangeEmail = (e) => {
+        this.setState({email: e.target.value})
+    }
+
+     handleChangeMessage = (e) => {
+        this.setState({message: e.target.value})
     }
 
     async handleSubmit(e){
@@ -45,7 +55,7 @@ class Email extends Component {
                     value= {this.subject}
                     name="subject"
                     placeholder= "Subject"
-                    onChange= {this.handleChange}
+                    onChange= {this.handleChangeSubject}
                 /> 
                 <br />
                  <input 
@@ -53,7 +63,7 @@ class Email extends Component {
                     value= {this.email}
                     name="email"
                     placeholder="Email"
-                    onChange= {this.handleChange}
+                    onChange= {this.handleChangeEmail}
                 /> 
                 <br />
                  <input 
@@ -61,7 +71,7 @@ class Email extends Component {
                     value={this.message}
                     name="message"
                     placeholder="Message"
-                    onChange= {this.handleChange}
+                    onChange= {this.handleChangeMessage}
                 /> 
 
                 <button> Submit </button>
