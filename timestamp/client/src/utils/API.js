@@ -24,29 +24,19 @@ export default {
     return axios.post("/paystub");
   },
   signIn:function (type, callback) {
-    
-
     // console.log("type",type.password )
-
     let URL = "/api/signIn/account/signIn"     // change to sign in
-
     axios.post(URL, {                   //Robert 
       email: type.email,               //login route
       password: type.password
     }).then(function (response) {
 
     // console.log(response)
-  
-
-
-
-callback(response)
+    callback(response)
 
     }).catch(function (error) {
       console.log(error)
     })
-
-    
   },
   sign_Up: function() {
     return axios.post("/signup");
@@ -55,7 +45,7 @@ callback(response)
     return axios.get("/verify");
   },
 
-  sendEmail:function (type, callback) {
+   sendEmail:function (type, callback) {
   let URL = "/api/email/email"     // email api route sent to client
 
     axios.post(URL, {                    

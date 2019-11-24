@@ -1,42 +1,57 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config')
+const sendMail = require('../models/sendMail')
 
 
-const getEmailData = (email, message) => {
-         data = {
-            from: config.email,
-            to:email,
-            subject: `Hello`,
-            html: message
-        }
-        return data;
-}
 
+       
+module.exports ={
+       
+       sendEmail :function (req, res) {       
+            console.log(req.body)
 
-module.exports = {        
-    sendEmail:function(email, message){    
-        //transporter allows me to send emails via Gmail  
-        //email and password are hidden 
         let transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            auth:{
-                user: config.email,
-                pass: config.password
-            }
-        })
+                service: 'gmail',
+                port: 465,
+                secure: true,
+                auth: {
+                    type: 'OAuth2',
+                    user: config.email,
+                    clientId: config.clientId,
+                    clientSecret: config.clientSecret,
+                    refreshToken: config.refreshToken,
+                    accessToken: config.accessToken
+                }
+});
 
-       const mail = getEmailData(email, message)
-      
-        transporter.sendMail(mail, function (err, info) {
-         console.log('err', err);
-         console.log('info', info);
+        const htmlEmail = `
+        <ul>
+                <li>Subject: ${req.body.subject}</li>
+                <li>Email: ${req.body.email} </;i>
+        <ul>
+        <h3> Message<h3>
+        <p>${req.body.message}</li>
+        `
 
-            res.send({
-                success: true,
-                message: 'Sent email'
-            })
-            transporter.close();
-        })
+
+        const mail = {
+                from: config.email,
+                subject: req.body.subject,
+                to: req.body.email,
+                text: `${req.body.message}`,
+                html: `${req.body.message}`
+        }
+
+
+        transporter.sendMail(mail, function(error, response) {
+        if(error) {
+            console.log(error)
+        } else {
+            console.log( " email sent successfully")
+        }
+        transporter.close();
+    })
+
+
     }
 }
-        

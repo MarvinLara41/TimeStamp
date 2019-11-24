@@ -35,7 +35,7 @@ export default {
 
 
  sendEmail:function (type, callback) {
-  let URL = "/api/email/email"     // email api route sent to client
+  let URL = "/api/email"     // email api route sent to client
 
     axios.post(URL, {                    
            email: type.email,               

@@ -22,6 +22,7 @@
   "engines": {
     "node": ">=6"
   },
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/bcrypt": "^3.0.0",
@@ -35,12 +36,14 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.0",
+    "cookie-parser": "^1.4.4",
     "env": "0.0.2",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "http-proxy-middleware": "^0.20.0",
     "if-env": "^1.0.4",
+    "mongoose": "^5.7.12",
     "nodemailer": "^6.3.1",
-    "mongoose": "^5.7.11",
     "react-dom": "^16.11.0",
     "tsutils": "3.17.1",
     "whatwg-fetch": "^3.0.0"

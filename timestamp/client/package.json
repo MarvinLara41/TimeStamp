@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@syncfusion/ej2": "^17.3.28",
     "@syncfusion/ej2-react-schedule": "^17.3.28",

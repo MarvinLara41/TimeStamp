@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
  
 const InsuranceSessionSchema = new mongoose.Schema({
+    userId: {
+      type: String,
+      default: ''
+  },
     firstName: {
         type: String,
         default: '',
