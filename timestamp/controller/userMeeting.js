@@ -1,21 +1,43 @@
 const meetings= require ('../models/meetingSchema');
 
+//@marvin "robert" made some changes its working now 
+
 
 module.exports = {
     Me_etings: function(req, res) {
         const {body}= req;
-        const {
-            event,
-            user
+
+        let {
+           user1
         }= body;
 
 
-        const meeting = new meetings();
+        let {
+            user2
+        }= body;
 
-        meeting.event = event;
-        meeting.user = user;
+    
+        let {
+            event
+        }= body;
 
-        meeting.save((err,user)=>{
+
+        let {
+            event_date
+        }= body;
+
+
+        const meeting = new meetings({
+
+            user1:user1,
+            user2:user2,
+            event:event,
+            event_date:event_date
+
+        });
+
+
+        meeting.save((err,user1,user2)=>{
             if (err){
                 return res.send({
                     success: false,
@@ -24,8 +46,10 @@ module.exports = {
             }
             return res.send({
                 success: true,
-                message: 'Meeting has been set'
-            });
+                message: 'Meeting has been set',
+                meeting:meeting
+
+            })
         })
     }
 }

@@ -1,31 +1,131 @@
 
 
- 
 
 
 
-.main1{
-    /* background: #F9F9F9; */
-
-    height: 717px;
-    background: #4CAF50;
+.meeting{
+    width: 900px;
+    height: 560px;
+    margin-top: -400px;
+    margin-left: -10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    left: 400px;
+    top: -250px;
+    padding: 3%;
+    overflow: scroll;
+    /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
 
 }
 
 
+
+.user_info1{
+  margin-top: -90px;
+  width: 300px;
+  height: 500px;
+  background-color: rgb(169, 199, 246);
+  text-align: center;
+  font-size: 50px;
+}
+
+
+
+.card1{
+    margin-left: 400px;
+    margin-bottom: -150px;
+    margin-top: -10px;
+
+  
+}
+
 .logout{
 
-    margin-left: 90%;
+    margin-left: 93%;
     border-radius: 30px;
     margin-top:15px ;
-    margin-bottom: -40px;
+    margin-bottom: 40px;
 
 }
 
 
 .table1main{
-    margin-top: 50px;
-    margin-left: 350px;
-    max-width: 1000px;
+    margin-top: -400px;
+    margin-left: 300px;
+    /* max-width: 1000px; */
+  
 
 }
+
+
+
+.main1{
+
+  /* background-color: chartreuse; */
+  height: 400px;
+
+}
+
+/* ********************************** SideNav  ******************************************* */
+
+
+.sidenav {
+    height: 520px;
+    width: 300px;
+    margin-bottom: -300px;
+    position: fixed;
+    margin-top: -190px;
+    /* overflow-y: auto; */
+
+    transform: translateX(-245px);
+    transition: all .6s ease-in-out;
+    box-shadow: 0 5px 20px 0 rgba(65, 32, 32, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    background-color: #394263;
+  }
+  
+  .sidenav.active {
+    transform: translateX(0);
+  }
+  
+  .sidenav__close-icon {
+    position: absolute;
+    visibility: visible;
+    top: 15px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ddd;
+
+  }
+  
+  .sidenav__list {
+    padding: 0;
+    margin-top: -15px;
+    list-style-type: none;
+  }
+  
+  .sidenav__list-item {
+    padding: 20px 20px 20px 40px;
+    color: #ddd;
+  }
+  
+  .sidenav__list-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+  .sidenav {
+    position: relative;
+    transform: translateX(0);
+  }
+
+  .sidenav__close-icon {
+    visibility: hidden;
+  }
+
+

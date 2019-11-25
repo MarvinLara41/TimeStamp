@@ -1,22 +1,25 @@
-import React, {Component } from 'react';
+import React, {Component} from 'react';
 
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+
 // import API from "../../utils/API";
 
 import "./index.css"
 
-
-
 class LogOutButton extends Component {
 
-        //  localStorage.removeItem("token")
+        
     render() { 
-        return ( 
 
-            <div type="button" value="Button" className="signout">
-               <Link to="/"> signout</Link> 
-                
-                </div>
+    //  localStorage.removeItem("token");
+
+        return ( 
+<form>     
+     
+
+
+<button type="submit" class="btn btn-link btn-logout signout"><Link to="/"> signout</Link> </button>
+</form>
 
          );
     }

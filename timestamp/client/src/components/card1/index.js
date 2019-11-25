@@ -5,18 +5,30 @@ import "./index.css"
 class Card1 extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+
+            
+
+         }
     }
     render() { 
         return ( 
+
 <>
 
-<div class="main-header">
-  <div class="main-header__updates">Recent Items</div>
+
+<div className="main-header">
+
+
+
+
+
+
 </div>
 
 
 </>
+
          );
     }
 }

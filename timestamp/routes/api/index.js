@@ -1,6 +1,4 @@
-
 const router = require("express").Router();
-
 const payStub = require('./payStub');
 const meeting = require('./meeting');
 const insurance = require ('./insurance');
@@ -10,6 +8,7 @@ const signIn = require('./signIn');
 const signUp =require('./signUp');
 const verify = require('./verify');
 const logOut = require('./logOut');
+const getAllUsers = require('./getAllUsers');
 
 // routes
 router.use("/paystub", payStub);
@@ -21,6 +20,7 @@ router.use("/signIn", signIn);
 router.use("/signup", signUp);
 router.use("/verify", verify);
 router.use("/logOut", logOut);
+router.use("/users", getAllUsers);
 
 
 module.exports = router;

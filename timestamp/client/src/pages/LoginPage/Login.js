@@ -26,6 +26,7 @@ class Login extends Component {
 
 
         return ( 
+            
 
 <div className= "wall">
              <div className="nav_top">

@@ -7,6 +7,7 @@ import DashBoard from "./pages/dashboard/index";
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
 
+// import { withRouter } from 'react-router-dom';
 
 // check to see if there is a token in local storage
 

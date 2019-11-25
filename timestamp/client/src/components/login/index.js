@@ -7,14 +7,17 @@ import API from "../../utils/API";
 // import { Button, Form } from 'react-bootstrap';
 
 
+
+
 import "./index.css"
 // import { response } from 'express';
 // import { ca } from 'date-fns/locale';
 
 class FormMain extends Component {
     
-  constructor(props) {
-    super(props)
+    constructor(props) {
+    
+      super(props)
 
 
     this.state = { 
@@ -43,6 +46,19 @@ handlePasswordChange(e){
 }
 
 
+componentDidMount (){
+
+  const local = localStorage.getItem("token")
+
+  console.log(local)
+
+  if(local){
+    localStorage.removeItem("token")
+  }
+}
+
+
+
 
 
 submitForm(e){
@@ -59,16 +75,15 @@ API.signIn(this.state, (callback) => {
   if(callback.data.success){
     this.setState({loggedIn:true})
     console.log("dlfhois",this.state.loggedIn )
+    window.location.href = "/dashboard";
+  }else if(this.state.loggedIn) {
+
+    console.log("true")
+
   }
 
-  // if(this.state.loggedIn) {
-  //   this.props.handleSuccessfulAuth(callback)
-  // }
-
+  
 // devrobert@timestamp.com
-
-
- 
 
 
 } )
@@ -78,10 +93,13 @@ API.signIn(this.state, (callback) => {
 
 
 
+
 // devrobert@timestamp.com
 
-
     render() { 
+
+
+
 
       
 
@@ -92,8 +110,8 @@ API.signIn(this.state, (callback) => {
 
 
 <div className="mx-auto">
-    
-         
+
+
            <form onSubmit= {this.submitForm} >
             <div>
 

@@ -1,37 +1,16 @@
 .signout{
   
-    /* border: none; */
     border-radius: 15px;
-    /* padding: 1rem 2rem; */
-    /* margin: 0; */
     color: #ffffff;
     font-family: sans-serif;
-    /* font-size: 1rem; */
     text-align: center;
-    /* border: hidden; */
     height: 30px;
-    /* text-decoration: none; */
   
 }
-
-
 
 
 .signout:hover,
 .signout:focus {
     background: #F9F9F9;
  
-    /* border: hidden; */
-
 }
-/* 
-.signout:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
-}
-
-.signout:active {
-    transform: scale(0.99);
-    text-decoration: none;
-} */
-
