@@ -1,26 +1,18 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  calendar: function() {
-    return axios.post("/calendar");
-  },
   clock_In: function() {
-    return axios.post("/api/account/clockin");
-  },
-  // Gets the book with the given id
-  clock_Out: function() {
-    return axios.post("/api/account/clockout");
-  },
-  // Deletes the book with the given id
-  in_Surance: function() {
-    return axios.post("/api/account/insurance");
+    return axios.post("/clockin");
   },
 
-  interview: function() {
-    return axios.post("/interview");
+  clock_Out: function() {
+    return axios.post("/clockout");
   },
-  // Saves a book to the database
+
+  in_Surance: function() {
+    return axios.post("/insurance");
+  },
+
   log_Out: function() {
     return axios.get("/logOut");
   },
@@ -34,30 +26,22 @@ export default {
   pay_Stub: function() {
     return axios.post("/paystub");
   },
-  signIn:function (type, callback) {
-    
-
+  signIn: function(type, callback) {
     // console.log("type",type.password )
-
-    let URL = "/api/signIn/account/signIn"     // change to sign in
-
-    axios.post(URL, {                   //Robert 
-      email: type.email,               //login route
-      password: type.password
-    }).then(function (response) {
-
-    // console.log(response)
-  
-
-
-
-callback(response)
-
-    }).catch(function (error) {
-      console.log(error)
-    })
-
-    
+    let URL = "/api/signIn/account/signIn"; // change to sign in
+    axios
+      .post(URL, {
+        //Robert
+        email: type.email, //login route
+        password: type.password
+      })
+      .then(function(response) {
+        // console.log(response)
+        callback(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   },
   sign_Up: function() {
     return axios.post("/signup");
@@ -65,4 +49,20 @@ callback(response)
   Verify: function() {
     return axios.get("/verify");
   },
+
+  sendEmail: function(type, callback) {
+    let URL = "/api/email/email"; // email api route sent to client
+
+    axios
+      .post(URL, {
+        email: type.email,
+        message: type.message
+      })
+      .then(function(response) {
+        callback(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 };

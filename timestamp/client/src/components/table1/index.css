@@ -1,22 +1,14 @@
+.table {
+  max-width: 800px;
+  max-width: 700px;
+  margin-left: 100px;
+  background: #f9f9f9;
 
-.table{
-   max-width: 800px;
-   max-width: 700px;
-   margin-left: 100px; 
-   background: #F9F9F9;
+  /* float:left; */
 
-   /* float:left; */
-
-   /* overflow: auto; */
-
+  /* overflow: auto; */
 }
 
-
-
-
-
-.head{
-   
-    margin-left: 350px;
+.head {
+  margin-left: 350px;
 }
-

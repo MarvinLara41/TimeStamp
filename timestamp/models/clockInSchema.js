@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const clockInSchema = new mongoose.Schema({
+  userId: {
+      type: String,
+      default: ''
+  },
   fullName: {
       type: String,
       default: ''
