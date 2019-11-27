@@ -6,8 +6,8 @@ const clockInSchema = new mongoose.Schema({
       default: ''
   },
   clockIn: {
-      type: Date,
-      default: Date.now()
+      type: String,
+      default: ""
   }
 });
 

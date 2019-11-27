@@ -1,21 +1,28 @@
-import React from "react"
-const UserInfo = props => {
-    return(
-        <div className = "container">
-            <div className="card">
-            <h3 className="card-header">Your Info</h3>
-                <div className="card-body">
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Name:</li>
-                    <li className="list-group-item">DOB:</li>
-                    <li className="list-group-item">Occupation:</li>
-                    <li className="list-group-item"></li>
-                </ul>
-                </div>
-            </div>
+import React, { Component } from "react";
+import { Card } from "react-bootstrap";
 
-        </div>
-    )
+class UserCard extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+        <Card border="light" style={{ width: "18rem" }}>
+          <Card.Header>Header</Card.Header>
+          <Card.Body>
+            <Card.Title>Light Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        ;
+      </div>
+    );
+  }
 }
 
-export default UserInfo
+export default UserCard;

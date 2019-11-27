@@ -1,38 +1,31 @@
-import React, {Component } from 'react';
+import React, { Component } from "react";
 
+import Clock from "../../components/Clock/Clock";
+import NavMain from "../../components/topNav/index";
+import Recent from "../../components/RecentPunches/RecentPunches";
 
-import Card from "../../components/Card/Card"
-import NavMain from "../../components/topNav/index"
-import Recent from "../../components/RecentPunches/RecentPunches"
-import Footer from "../../components/Footer/Footer"
-
-
-import "./clockin.css"
-import SideNav from '../../components/sideNav/index';
+import "./clockin.css";
 
 class Clockin extends Component {
-    render() {
-        return (
-            <div className = "wall">
-            <div className = "nav_top">
-                <NavMain />
-            </div>
-            <div>
-                <SideNav />
-            </div>
-            <div className = "center1">
-                <Card />
-                <Recent />
-            </div>
-            <div>                
-                <Footer />
-            </div>
-            </div>
-    
-            
-        )
-    
-}
+  state = {
+    time: new Date().toLocaleTimeString()
+  };
+  timeLock = () => {
+    return this.state.time;
+  };
+  render() {
+    return (
+      <div className="wall">
+        <div className="nav_top">
+          <NavMain />
+        </div>
+        <div className="center1">
+          <Clock />
+          <Recent time={this.state.time} />
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Clockin
+export default Clockin;

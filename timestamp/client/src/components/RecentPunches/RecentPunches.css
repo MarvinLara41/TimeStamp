@@ -1,4 +1,40 @@
-.card-header {
-    background-color:white;
-}
+#title {
+    margin-top: 25px;
+    text-align: center;
+    font-family: arial, sans-serif;
+    color: #f2f2f2;
+    background-color: #353a40;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  
+  #punch {
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+  }
+  
+  #punch td, #punch th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #punch tr{
+      background-color: #f2f2f2;
+    }
+  
+  #punch tr:hover {background-color: #ddd;}
+  
+  #punch th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #353a40;
+    color: white;
+  }
 
+  tbody{
+    border-radius: 25px;
+  }
