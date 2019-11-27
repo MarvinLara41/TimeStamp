@@ -4,9 +4,9 @@ import Login from "./pages/LoginPage/Login";
 
 import DashBoard from "./pages/dashboard/index";
 
-// import Email from "./components/Email/Email";
+import Email from "./components/Email/Email";
 
-import Insurance from "./components/Insurance/Insurance";
+// import Insurance from "./components/Insurance/Insurance";
 
 import {
   BrowserRouter as Router,
@@ -66,8 +66,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Login} />} />
             <PrivateRoute exact path="/dashboard" component={DashBoard} />
-            {/* <Email /> */}
-            <Insurance />
+            <Email />
+            {/* <Insurance /> */}
           </Switch>
         </div>
       </Router>
