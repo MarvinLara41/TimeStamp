@@ -1,24 +1,24 @@
-const user = require ('../models/user');
-
+const user = require("../models/user");
 
 module.exports = {
+  getAll_user: function(req, res) {
+    let { body } = req;
 
-    getAll_user: function(req, res) {
+    const { token_1 } = body;
 
+    const token2 = body.token_1;
 
-    let {body} = req;
+    console.log("body", token2);
 
+    user
+      .find({ _id: token2 })
+      .then(function(data) {
+        res.send(data);
 
-    let {
-        token_1
-     }= body;
-
-     console.log(req.body)
-
-        console.log("backendside+>>>>>>>>>",body)
-
-        user.find({"_id":`${body.token_1}`}).then(user => res.json(user))
-        .catch(err => res.status(400).json("Error: " + err))
-    }
-
-}
+        console.log(data);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
+};

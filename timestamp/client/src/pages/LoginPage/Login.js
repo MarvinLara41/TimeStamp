@@ -1,49 +1,30 @@
-import React, {Component } from 'react';
+import React, { Component } from "react";
 
-import FormMain from "../../components/login"
+import FormMain from "../../components/login";
 
-import NavMain from "../../components/topNav/index"
-
-// import { Redirect} from "react-router-dom";
+import NavMain from "../../components/topNav/index";
 
 // devrobert@timestamp.com
 
-import "./index.css"
+import "./index.css";
 
 class Login extends Component {
+  state = {
+    // token:localStorage.getItem("token")
+  };
+  render() {
+    return (
+      <div className="wall">
+        <div className="nav_top">
+          <NavMain />
+        </div>
 
-    
-    state = { 
-        // token:localStorage.getItem("token")
-     }
-    render() { 
-
-   
-
-      
-
-
-
-
-        return ( 
-            
-
-<div className= "wall">
-             <div className="nav_top">
-
-                <NavMain/>
-
-             </div>
-
-
-            <div className="center1">
-
-            <FormMain />
-
-            </div>
-</div>
-         );
-    }
+        <div className="center1">
+          <FormMain />
+        </div>
+      </div>
+    );
+  }
 }
- 
-export default Login ;
+
+export default Login;

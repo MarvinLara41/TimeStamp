@@ -1,40 +1,36 @@
-html{
+/* html{
 
-}
+} */
 
-body{
+body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
   color: #777;
   background: rgb(255, 255, 255);
-  }
-
-.wall{
-  /* background: #4CAF50; */
-  background: rgb(177, 177, 177);
-  height: 717px;
-  /* position: fixed; */
- 
 }
 
-
-
-.center1{
-    
-    height: 500px;
-    width: 350px;
-    margin: auto;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    max-width: 400px;
-    width: 100%;
-    position: relative;
-
+.wall {
+  background-color: rgb(139, 177, 101);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
 }
 
-
-
+.center1 {
+  height: 500px;
+  width: 350px;
+  margin: auto;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}

@@ -3,12 +3,17 @@ const UserSession = require('../models/userSession');
 module.exports = {
     Verify: function(req,res,next){
         //verify token, make sure its not deleted
-        const {query} = req;
-        const {token} = query;
+        let {body}= req;
+
+        const{
+             
+         }= body;
+
        
+        console.log("please work",body)
        
         UserSession.find({
-            _id: token,
+            "_id": body.query,
             isDeleted: false
         }, (err, sessions) => {
             if (err){
@@ -26,9 +31,11 @@ module.exports = {
             }else {
                 return res.send({
                     success: true,
-                    message: 'Verification is good'
+                    message: 'Verification is good',
+                    data1:sessions
                 })
             }
+           
         });
        
 }

@@ -26,6 +26,7 @@ module.exports = {
             event_date
         }= body;
 
+        console.log(body)
 
         const meeting = new meetings({
 
