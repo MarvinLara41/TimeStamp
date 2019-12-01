@@ -20,8 +20,8 @@ class FormMain extends Component {
     this.state = { 
         email: '',
         password: '',
-        message: {}
-        ,loggedIn: null
+        message: {},
+        loggedIn: null
      }
 
      this.handleEmailChange = this.handleEmailChange.bind(this)
@@ -112,8 +112,10 @@ API.signIn(this.state, (callback) => {
             <button type ="submit"className="btn btn-success" id="sudmit1">submit</button>
             </form>
 
-            </div>
+            
 
+            </div>
+         
 
 
 </div>

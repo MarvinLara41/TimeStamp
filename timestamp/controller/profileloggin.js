@@ -1,22 +1,14 @@
-const User = require('../models/user');
-const UserSession = require('../models/userSession');
-const profile = require('../models/profile');
+const mongoose = require('mongoose');
+const Profile = require('../models/profile');
 
 
 module.exports = {
-    sign_In: function(req, res) {
-//Sign up post request can be checked with postman using the post "/api/account/signup"
-      //everything under this post request is connected to userSession.js
-      const {body} = req;
-      const {
-          password
-      }= body;
-  
-      let {
-          email
-      }= body;
-  
-      //if error checks if information is incorrect
+    logginProfile: function(req, res) {
+        let {body} =req;
+        const{password}=body;
+        let{email}=body;
+
+         //if error checks if information is incorrect
       if (!email){
           return res.send({
               success: false, 
@@ -29,14 +21,11 @@ module.exports = {
               message: 'PASSWORD CAN NOT BE BLANK'
           });
       }
-            
-      email = email.toLowerCase();
-  
-      //finding if the user is valid
-      User.find({
-          email: email
-      }, (err, users) =>{
-          if (err){
+
+      Profile.find({
+          email
+      }, (err, users)=>{
+           if (err){
               return res.send({
                   success: false,
                   message: "server error"
@@ -49,21 +38,13 @@ module.exports = {
                   message: "Invalid email or password"
               });
           }
-          //user is local to this function
+
           const user = users[0];
-          if (!user.validPassword(password)){
-              return res.send({
-                  success: false,
-                  message: "Invalid password"
-              });
-          }
-  
-          //if user information is correct this will run
-          //data is taken from userSession.js file
-          const userSession = new UserSession();
-  
-          userSession.userId = user._id;
-          userSession.save((err,doc) => {
+
+          const loggin = new Profile();
+
+          loggin.userId = user._id;
+           userSession.save((err,doc) => {
               if (err){
                   return res.send({
                   success: false, 
@@ -78,9 +59,7 @@ module.exports = {
                                   //the database idenitfys a user based off this token
                                   //it can also be used to delete the user
               })
-          });
       });
-  
-  }
-
+    });
+}
 }

@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const config = require('../config/config')
 const sendMail = require('../models/sendMail')
-const xoauth2 = require('xoauth2')
+
 
 
        
