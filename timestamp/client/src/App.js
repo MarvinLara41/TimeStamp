@@ -4,6 +4,10 @@ import Login from "./pages/LoginPage/Login";
 
 import DashBoard from "./pages/dashboard/index";
 
+import Email from "./components/Email/Email"
+
+// import PayStub from "./components/payStub/PayStub"
+
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
 
@@ -70,6 +74,8 @@ render() {
         <Switch>
         <Route exact  path="/"  component ={Login} />}  />
         <PrivateRoute exact  path="/dashboard" component={DashBoard}  />
+        <Email />
+        {/* <Route exact path="/api/payStub/payStub" component= {PayStub} /> */}
         </Switch>
       </div>
     </Router>

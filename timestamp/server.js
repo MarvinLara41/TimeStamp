@@ -4,16 +4,8 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const routes = require("./routes");
-const dotenv = require("dotenv");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+const mongo = require("./config/config");
 
-dotenv.config();
-
-// Define middleware here
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -22,15 +14,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-// Add routes, both API and view
+// Add routes, both API and vie
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.DB_CONNECT,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("connected to DB!")
-);
+mongoose.connect(process.env.MONGODB_URI || mongo.mongoAtlas);
 
 // Start the API server
 app.listen(PORT, function() {

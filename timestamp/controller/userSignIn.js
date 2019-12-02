@@ -1,6 +1,6 @@
 const User = require('../models/user');
 const UserSession = require('../models/userSession');
-
+const profile = require('../models/profile');
 
 
 module.exports = {

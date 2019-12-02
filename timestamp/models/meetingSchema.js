@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const meetingSchema = new Schema({
+    userId: {
+      type: String,
+      default: ''
+  },
     event: {
         type: String
         

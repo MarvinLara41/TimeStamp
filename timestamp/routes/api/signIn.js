@@ -1,7 +1,7 @@
 var router = require('express').Router();
 const signIn= require('../../controller/userSignIn');
 
-router.route('/account/signIn')
+router.route('/signIn')
     .post(signIn.sign_In)
 
 

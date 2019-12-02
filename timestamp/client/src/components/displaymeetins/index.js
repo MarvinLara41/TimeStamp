@@ -9,7 +9,6 @@ class MeetingDisplay extends Component {
 
   render() {
     const { data } = this.props;
-
     const names = data.map(usermain => {
       return (
         <div class="card text-center" key={usermain._id}>

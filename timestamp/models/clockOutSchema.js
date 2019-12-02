@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const ClockOutSchema = new mongoose.Schema({
+  userId: {
+      type: String,
+      default: ''
+  },
   fullName: {
       type: String,
       default: ''
