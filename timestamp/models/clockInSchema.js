@@ -1,16 +1,24 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const clockInSchema = new mongoose.Schema({
-  fullName: {
-      type: String,
-      default: ''
-  },
-  clockIn: {
-      type: Date,
-      default: Date.now()
+const Schema = mongoose.Schema;
+
+const clockSchema = new Schema({
+  punchIn: String,
+
+  punchOut: String,
+
+  lunch: String,
+
+  break: String,
+
+  date: { type: Date, default: Date.now },
+
+  clocks_1: {
+    type: Schema.Types.ObjectId,
+    ref: "user"
   }
 });
 
-const clockIn = mongoose.model('ClockIn', clockInSchema);
+const addClock = mongoose.model("clock", clockSchema);
 
-module.exports= clockIn;
+module.exports = addClock;

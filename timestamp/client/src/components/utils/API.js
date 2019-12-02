@@ -1,19 +1,19 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
+
   clock_In: function() {
-    return axios.post("/api/account/clockin");
+    return axios.post("/clockin");
   },
-  // Gets the book with the given id
+  
   clock_Out: function() {
-    return axios.post("/api/account/clockout");
+    return axios.post("/clockout");
   },
-  // Deletes the book with the given id
+  
   in_Surance: function() {
-    return axios.post("/api/account/insurance");
+    return axios.post("/insurance");
   },
-  // Saves a book to the database
+  
   log_Out: function() {
     return axios.get("/logOut");
   },
@@ -32,4 +32,44 @@ export default {
   Verify: function() {
     return axios.get("/verify");
   },
+
+
+ sendEmail:function (type, callback) {
+  let URL = "/api/email"     // email api route sent to client
+
+    axios.post(URL, {                    
+           email: type.email,               
+           message: type.message
+    }).then(function (response) {
+
+    callback(response)
+    }).catch(function (error) {
+      console.log(error)
+    })
+  }
+
+
+// sendEmail:function(name, email, message) {
+//   fetch('/api/email/email', {
+//     method: 'POST',
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       name: name,
+//       email: email,
+//       message: message
+//     })
+//   })
+//   .then((res) => res.json())
+//   .then((res) => {
+//     console.log('here is the response: ', res);
+//   })
+//   .catch((err) => {
+//     console.error('here is the error: ', err);
+//   })
+//  }
+  
 };
+

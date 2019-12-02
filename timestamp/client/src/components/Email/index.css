@@ -1,0 +1,41 @@
+.header{
+    align-self: auto;
+    text-align: center;
+}
+
+.form{
+    padding: 15%;
+    position: fixed;
+    margin-left: 15%;
+}
+.subject{
+    width: 250px;
+    margin: auto;
+    border: 3px solid rgba(0, 0, 0, 0.157);
+    font-family: "Times New Roman", Times, serif;
+    resize: none;
+    word-wrap: break-word;
+}
+
+.email{
+    width: 250px;
+    margin: auto;
+    border: 3px solid rgba(0, 0, 0, 0.157);
+    font-family: "Times New Roman", Times, serif;
+    resize: none;
+    word-wrap: break-word;
+}
+
+.message{
+    overflow: auto;
+    width: 500px;
+    height: 200px;
+    font-family: "Times New Roman", Times, serif;
+    resize: none;
+    word-wrap: break-word;
+    text-align: top;
+}
+
+.button{
+    border: 3px solid rgba(0, 0, 0, 0.157);
+}

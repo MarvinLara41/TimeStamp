@@ -1,0 +1,23 @@
+.main_1 {
+  width: 820px;
+  height: 470px;
+  background-color: rgb(252, 252, 255);
+  opacity: 0.8;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.button_main {
+  margin-left: 310px;
+}
+
+.clockmain1 {
+  margin-left: 300px;
+}
+
+.clock_info {
+  width: 800px;
+  height: 300px;
+  margin-top: 10px;
+  background-color: rgb(255, 255, 255);
+}

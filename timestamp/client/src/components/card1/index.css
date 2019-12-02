@@ -1,0 +1,10 @@
+.main-header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    margin: 20px;
+    padding: 20px;
+    width: 700px;
+    height: 100px; /* Force our height since we don't have actual content yet */
+    background-color: #e3e4e6;
+    color: slategray;
+  }

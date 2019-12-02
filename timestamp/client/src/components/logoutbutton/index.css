@@ -1,0 +1,16 @@
+.signout{
+  
+    border-radius: 15px;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    height: 30px;
+  
+}
+
+
+.signout:hover,
+.signout:focus {
+    background: #F9F9F9;
+ 
+}

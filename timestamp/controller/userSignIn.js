@@ -1,6 +1,6 @@
 const User = require('../models/user');
 const UserSession = require('../models/userSession');
-
+const profile = require('../models/profile');
 
 
 module.exports = {
@@ -46,7 +46,7 @@ module.exports = {
           if (users.length !=1){
               return res.send({
                   success: false,
-                  message: "Invalid"
+                  message: "Invalid email or password"
               });
           }
           //user is local to this function

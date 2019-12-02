@@ -1,0 +1,68 @@
+#item-list ul {
+  padding: 0;
+  margin: 20px 0;
+  font-family: Arial, sans serif;
+  color: #555;
+  width: 800px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#item-list ul > li {
+  list-style: none;
+  border-top: 1px solid #ddd;
+  display: block;
+  padding: 20px;
+  overflow: hidden;
+}
+
+#item-list ul:last-child {
+  border-bottom: 1px solid rgb(178, 176, 176);
+}
+
+#item-list ul > li:hover {
+  background: #ffffff;
+  opacity: 0.7;
+}
+
+.expand {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
+
+h2 {
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: 28px;
+}
+
+span {
+  font-size: 10px;
+}
+
+.detail {
+  margin: 10px 0 0 0;
+  display: none;
+  line-height: 22px;
+}
+
+.icon {
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+.london {
+  background: url("http://placehold.it/50x50") top left no-repeat;
+}
+
+.newyork {
+  background: url("http://placehold.it/50x50") top left no-repeat;
+}
+
+.paris {
+  /* background: url("http://placehold.it/50x50") top left no-repeat; */
+}
