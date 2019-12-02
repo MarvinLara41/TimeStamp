@@ -1,6 +1,6 @@
 const payStub = require ('../models/payStubSchema'); 
 
-
+//Used to create payStub and send to database
 module.exports = {
     payStub: function(req, res) {
         const {body} = req;

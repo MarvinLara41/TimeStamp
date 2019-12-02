@@ -12,7 +12,9 @@ const verify = require('./verify');
 const logOut = require('./logOut');
 const email = require('./email');
 const profile = require('./profile')
-
+const pay = require('./getPay');
+const use = require('./getUser');
+const getInsurance = require('./getInsurance');
 // routes
 router.use("/paystub", payStub);
 router.use("/meeting", meeting);
@@ -25,4 +27,7 @@ router.use("/verify", verify);
 router.use("/logOut", logOut);
 router.use("/email", email);
 router.use("/profile", profile);
+router.use('/getPay', pay);
+router.use('/getUser', use);
+router.use('/getInsurance', getInsurance)
 module.exports = router;

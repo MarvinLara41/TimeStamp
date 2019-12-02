@@ -6,7 +6,11 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   firstName:String,
   lastName:String,
-  email:String
+  email:String,
+   userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 const payStubSchema = new Schema({

@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Profile = require('../models/profile');
 
-
+//Used for adding a profile to the database
 
 module.exports = {
     Profile: function(req, res) {
         let {body} =req;
             let {
+                password,
                 email,
                 lastName,
                 firstName,
