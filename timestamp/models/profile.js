@@ -2,6 +2,13 @@ const mongoose = require('mongoose');
 // const bcrypt = require('bcrypt');
 const Schema = mongoose.Schema;
 
+
+const UserSchema = new Schema({
+  firstName:String,
+  lastName:String,
+  email:String
+});
+
 const payStubSchema = new Schema({
     fullName:String,
     title:String,
@@ -35,7 +42,8 @@ const InsuranceSessionSchema = new Schema({
 
 const ProfileSchema = new mongoose.Schema({
     insurance: [InsuranceSessionSchema],
-    payCheck: [payStubSchema]
+    payCheck: [payStubSchema],
+    userInfo: [UserSchema]
 });
 
 

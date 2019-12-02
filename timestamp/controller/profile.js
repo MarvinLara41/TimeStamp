@@ -23,28 +23,13 @@ module.exports = {
                 phoneNumber,
             }=body;
 
-            //adding error incase an email is repeated on the database. 
-            // Profile.find({
-            //     email: email
-            // },(err, previousUser)=>{
-            // if(err){
-            // return res.send({
-            //     success: false, 
-            //     message: 'Error: must fill in password'
-            // });
-            //  }else if (previousUser.length > 0){
-            // return res.send({
-            //     success: false, 
-            //     message: 'Error: user already exists'
-            // });
-            // }
-
+           
 
             
             
             var profile = new Profile ({ 
 
-            // userInfo: [{firstName, lastName, email, password}],
+            userInfo: [{firstName, lastName, email, password}],
 
             insurance:[{firstName, lastName, email,insuranceName, dependencies, insuranceId, phoneNumber}],
 

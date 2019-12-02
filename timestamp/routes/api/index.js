@@ -1,9 +1,9 @@
 
 const router = require("express").Router();
 
-// const payStub = require('./payStub');
+const payStub = require('./payStub');
 const meeting = require('./meeting');
-// const insurance = require ('./insurance');
+const insurance = require ('./insurance');
 const clockIn = require ('./clockIn');
 const clockOut= require('./clockOut')
 const signIn = require('./signIn');
@@ -12,12 +12,11 @@ const verify = require('./verify');
 const logOut = require('./logOut');
 const email = require('./email');
 const profile = require('./profile')
-const loggin = require('./logginProfile')
+
 // routes
-router.use('/loggin', loggin);
-// router.use("/paystub", payStub);
+router.use("/paystub", payStub);
 router.use("/meeting", meeting);
-// router.use("/insurance", insurance);
+router.use("/insurance", insurance);
 router.use("/clockOut", clockOut);
 router.use("/clockIn", clockIn);
 router.use("/signIn", signIn);

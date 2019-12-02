@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import axios from 'axios';
 import index from './index.css';
-import Login from '../login/index'
+
 class Email extends Component {
     constructor (props){
         super(props)
@@ -56,7 +56,7 @@ class Email extends Component {
         return(
             <div> 
             <form className="form" onSubmit={this.handleSubmit}>
-                <h1 className="header">Send an Email</h1>
+                <h1 className="header">Send an Emailw</h1>
                 <input 
                     className="subject"
                     type="text"
