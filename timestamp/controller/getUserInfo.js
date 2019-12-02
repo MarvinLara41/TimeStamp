@@ -26,7 +26,15 @@ module.exports = {
               });
           }
 
-        console.log(JSON.stringify(user));
+    
+    // return res.send({
+    //     success: true,
+    //     message: 'Valid sign in',
+    //     token: user._id  //this is the unique user id in mongodb
+    //                               //the database idenitfys a user based off this token
+    //                               //it can also be used to delete the user
+    // })
+        console.log(JSON.stringify(user)); 
               
 
  }) 

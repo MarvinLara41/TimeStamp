@@ -28,8 +28,15 @@ module.exports = {
                   message: "server error"
               });
           }
-
-        console.log(JSON.stringify(stub));
+    
+        // return res.send({
+        //     success: true,
+        //     message: 'User payCheck',
+        //     token: stub._id  //this is the unique user id in mongodb
+        //                           //the database idenitfys a user based off this token
+        //                           //it can also be used to delete the user
+        // })
+        console.log(JSON.stringify(stub)); //data is shown in the terminal
               
 
  }) 
