@@ -1,0 +1,22 @@
+.sideone1 {
+  width: 300px;
+  height: 200px;
+}
+
+.picture {
+  /* border-radius: 50px; */
+  width: 300px;
+  height: 320px;
+  /* margin-left: 10px; */
+}
+
+.info_1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(2, 2, 2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: arial;
+
+  font-size: 21px;
+}

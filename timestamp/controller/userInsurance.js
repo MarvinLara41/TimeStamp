@@ -22,18 +22,36 @@ module.exports = {
     email = email.toLowerCase();
 
 
-    //saving employee insurance information
-    const newinsurance = new insuranceSchema();
+    insuranceSchema.find({
+        email:email
+    }, (err, check) => {
 
-    newinsurance.firstName= firstName;
-    newinsurance.lastName= lastName;
-    newinsurance.insuranceName= insuranceName;
-    newinsurance.dependencies= dependencies;
-    newinsurance.insuranceId= insuranceId;
-    newinsurance.phoneNumber= phoneNumber;
-    newinsurance.email= email;
+        if (err){
+              return res.send({
+                  success: false,
+                  message: "server error"
+              });
+          }
+  
+          if (check.length == 1){
+              return res.send({
+                  success: false,
+                  message: "This employee already has their paystub uploaded."
+              });
+          }
+
+          //saving employee insurance information
+        const newinsurance = new insuranceSchema();
+
+        newinsurance.firstName= firstName;
+        newinsurance.lastName= lastName;
+        newinsurance.insuranceName= insuranceName;
+        newinsurance.dependencies= dependencies;
+        newinsurance.insuranceId= insuranceId;
+        newinsurance.phoneNumber= phoneNumber;
+        newinsurance.email= email;
     
-    newinsurance.save((err,user) => {
+        newinsurance.save((err,user) => {
         if (err){
             return res.send({
                 success: false,
@@ -42,8 +60,10 @@ module.exports = {
         }
         return res.send({
             success: true,
-            message: 'Employee information has been added'
+            message: 'Employee information has been added',
+            token: user._id
         });
-    });
-}
+        });
+    })
+    }
 }

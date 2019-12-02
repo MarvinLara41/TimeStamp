@@ -1,0 +1,28 @@
+/* .lists {
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.4em;
+  list-style-type: none;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 0 15px;
+  font-family: "Open-sans", Arial, sans-serif;
+  border-radius: 8px;
+  margin-top: 20px;
+
+  left: -20px;
+  position: relative;
+  display: inline-block;
+  opacity: 0.9;
+} */
+
+.card {
+  margin-left: -20px;
+  width: 500px;
+}
+
+.card:hover {
+  background-color: beige;
+}

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import axios from 'axios';
+import index from './index.css';
 
 class Email extends Component {
     constructor (props){
@@ -15,7 +16,7 @@ class Email extends Component {
         this.handleChangeEmail= this.handleChangeEmail.bind(this)
         this.handleChangeMessage= this.handleChangeMessage.bind(this)
         this.handleSubmit =this.handleSubmit.bind(this)
-        
+        this.handleAlert = this.handleAlert.bind(this)
     }
 
     handleChangeSubject = (e) => {
@@ -45,12 +46,19 @@ class Email extends Component {
                 
     }
 
+    handleAlert = (e) => {
+         
+        alert("Email has been sent.")
+         
+    }
+
     render(){
         return(
             <div> 
-            <form onSubmit={this.handleSubmit}>
-                <h1>Send an Email</h1>
+            <form className="form" onSubmit={this.handleSubmit}>
+                <h1 className="header">Send an Emailw</h1>
                 <input 
+                    className="subject"
                     type="text"
                     value= {this.subject}
                     name="subject"
@@ -59,6 +67,7 @@ class Email extends Component {
                 /> 
                 <br />
                  <input 
+                    className="email"
                     type="text"
                     value= {this.email}
                     name="email"
@@ -67,18 +76,21 @@ class Email extends Component {
                 /> 
                 <br />
                  <input 
+                    className="message"
                     type="text"
                     value={this.message}
                     name="message"
                     placeholder="Message"
                     onChange= {this.handleChangeMessage}
                 /> 
-
-                <button> Submit </button>
+                <br />
+                <button className="button" onClick={this.handleAlert}> Submit </button>
             </form>        
             </div>
         )
     }
+
+    
 }
 
  export default Email;

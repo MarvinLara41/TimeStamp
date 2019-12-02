@@ -23,25 +23,15 @@ class Table1 extends Component {
         info:{
 
           EventSettingsModel:[{
-            dataSource:[{
-
+             dataSource:[{
 
               EndTime: new Date(2019, 0, 11, 6, 30),
               StartTime: new Date(2019, 0, 11, 4, 4)
 
-            }]
-
-
-
-          }]
-         
+                }]
+          }]     
         }
- 
-
-        
-      
     }
-
 
     }
 

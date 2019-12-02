@@ -4,7 +4,11 @@ import Login from "./pages/LoginPage/Login";
 
 import DashBoard from "./pages/dashboard/index";
 
-import Email from "./components/Email/Email";
+import Email from "./components/Email/Email"
+
+// import PayStub from "./components/payStub/PayStub"
+
+import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
 // import Insurance from "./components/Insurance/Insurance";
 
@@ -38,41 +42,16 @@ class App extends Component {
     };
   }
 
-  // handleSuccessfulAuth(){
+  
 
-  //   this.props.history.push("/dashboard")
-  // }
 
-  render() {
-    console.log(this.state.token);
-    // check to see if the user is auth before allowin to see info
 
-    const PrivateRoute = ({ component: Component, ...rest }) => (
-      <Route
-        {...rest}
-        render={props =>
-          this.state.token === true ? (
-            <Component {...props} />
-          ) : (
-            <Redirect to="/" />
-          )
-        }
-      />
-    );
 
-    return (
-      <Router>
-        <div>
-          <Switch>
-            <Route exact path="/" component={Login} />} />
-            <PrivateRoute exact path="/dashboard" component={DashBoard} />
-            <Email />
-            {/* <Insurance /> */}
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
+
+
 }
+
+
+
 
 export default App;

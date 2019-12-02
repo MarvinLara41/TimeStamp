@@ -8,16 +8,35 @@ const meetingSchema = new Schema({
       default: ''
   },
     event: {
-        type: Schema.Types.ObjectId,
-        ref: "Event"
+        type: String
+        
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
+
+    event_date: {
+        type: String
+    },
+
+    user1: {
+        type: String
+    },
+
+
+
+    user2: {
+        type: String
     }
-},
-    {timestamps:true}
+    ,
+
+    date : {
+        type: Date,
+        default: Date.now
+    }
+
+
+}
+, {timestamps:true}
 );
 
 const meeting = mongoose.model('Meeting', meetingSchema);
+
 module.exports = meeting;
