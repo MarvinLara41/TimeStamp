@@ -1,23 +1,20 @@
-
-.meetings{
-    padding: 60px;
-    /* background-color: blue; */
-    width: 300px;
-    height: 400px; 
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    align-items: center;
+.meetings {
+  padding: 60px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  align-items: center;
 }
 
-
-
-
-.side{
-
-    width: 470px;
-    height: 370px;
-    background-color: rgb(255, 255, 255);
-    margin-left: 310px;
-    margin-top: -390px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-
+.side {
+  width: 600px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 310px;
+  margin-top: -420px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  overflow: scroll;
+  border-radius: 5px;
+  align-items: center;
 }

@@ -16,6 +16,7 @@ class DashBoard extends Component {
       calender: false,
       firstName: "",
       lastName: "",
+      image: "",
       email: ""
     };
     this.clockIn = this.clockIn.bind(this);
@@ -32,13 +33,13 @@ class DashBoard extends Component {
     let token = localStorage.getItem("userId");
     if (token) {
       API.userInfoMain(callback => {
-        console.log(callback.data);
         this.setState({
           firstName: callback.data[0].firstName,
           lastName: callback.data[0].lastName,
-          email: callback.data[0].email
+          email: callback.data[0].email,
+          image: callback.data[0].image
         });
-        console.log("checling state", this.state);
+        console.log("checling state", callback);
       });
     }
   }
@@ -105,6 +106,7 @@ class DashBoard extends Component {
                 <UserSide
                   firstName={this.state.firstName}
                   email={this.state.email}
+                  image={this.state.image}
                 />
               </div>
 

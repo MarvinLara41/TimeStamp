@@ -8,14 +8,14 @@ module.exports = {
 
     const token2 = body.token_1;
 
-    console.log("body", token2);
+    // console.log("body", token2);
 
     user
       .find({ _id: token2 })
       .then(function(data) {
         res.send(data);
 
-        console.log(data);
+        // console.log(data);
       })
       .catch(function(error) {
         console.log(error);

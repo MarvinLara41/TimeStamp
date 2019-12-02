@@ -1,13 +1,22 @@
-.sideone {
+.sideone1 {
   width: 300px;
-  height: 300px;
+  height: 200px;
+}
+
+.picture {
+  /* border-radius: 50px; */
+  width: 300px;
+  height: 320px;
+  /* margin-left: 10px; */
 }
 
 .info_1 {
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
-  font-size: 20px;
   color: rgb(2, 2, 2);
-  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-family: arial;
+
+  font-size: 21px;
 }

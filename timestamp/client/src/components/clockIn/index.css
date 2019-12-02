@@ -1,8 +1,10 @@
 .main_1 {
-  width: 800px;
+  width: 820px;
   height: 470px;
-  /* background-color: darkblue; */
+  background-color: rgb(252, 252, 255);
+  opacity: 0.8;
   padding: 10px;
+  border-radius: 15px;
 }
 
 .button_main {
@@ -16,6 +18,6 @@
 .clock_info {
   width: 800px;
   height: 300px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: rgb(255, 255, 255);
 }

@@ -24,8 +24,18 @@ module.exports = {
     res.status(201).json(user_1);
   },
 
-  getClock_In: async (req, res) => {
-    const user_1 = await user.findById(req.body.userId).populate("clock_2");
-    res.status(200).json(user_1);
+  // get request for nested collection in the users collection
+
+  getClock_In: async (req, res, next) => {
+    console.log(req.body);
+
+    // res.send(req.body);
+    // const userId = "5dd9817b9d42f676dcef0841";
+
+    const user_1 = await user.findById(req.body.userId1).populate("clock_2");
+
+    const data1 = await user_1;
+
+    res.status(201).json(data1.clock_2);
   }
 };

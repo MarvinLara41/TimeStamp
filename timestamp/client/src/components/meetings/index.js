@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import "./index.css";
 
+import MeetingDisplay from "../displaymeetins/index";
+
 import API from "../../utils/API";
 
 class Meetings extends Component {
@@ -17,40 +19,36 @@ class Meetings extends Component {
       user1: "",
       user2: "",
       event: "",
-      message: {}
+      message: {},
+      data_server: []
     };
+    this.handledate = this.handledate.bind(this);
     this.user1 = this.user1.bind(this);
     this.user2 = this.user2.bind(this);
-    this.event = this.event.bind(this);
+    this.handleUserEvent = this.handleUserEvent.bind(this);
     this.submitForm = this.submitForm.bind(this);
   }
 
-  handleChange = date => {
+  // handles the listening when typing
+  handledate = date => {
     this.setState({
       event_date: date
     });
-
-    console.log(this.state.event_date);
   };
 
   user1(e) {
-    this.setState({
-      user1: e.target.value
-    });
+    this.setState({ user1: e.target.value });
   }
 
   user2(e) {
-    this.setState({
-      user2: e.target.value
-    });
+    this.setState({ user2: e.target.value });
   }
 
-  event(e) {
-    this.setState({
-      event: e.target.value
-    });
+  handleUserEvent(e) {
+    this.setState({ event: e.target.value });
   }
 
+  // send the post request to the api with the value in the state
   submitForm(e) {
     e.preventDefault();
 
@@ -58,11 +56,12 @@ class Meetings extends Component {
       console.log(callback.data);
 
       this.setState({ message: callback.data });
-      this.setState({
-        user1: "",
-        user2: "",
-        event: ""
-      });
+    });
+  }
+
+  componentDidMount() {
+    API.getuserInfoMain(callback => {
+      this.setState({ data_server: callback.data });
     });
   }
 
@@ -96,14 +95,14 @@ class Meetings extends Component {
                 className="field"
                 placeholder="event"
                 type="text"
-                value={this.state.event}
-                onChange={this.event}
+                value={this.state.date1}
+                onChange={this.handleUserEvent}
               />
 
               <div>
                 <DatePicker
                   selected={this.state.event_date}
-                  onChange={this.handleChange}
+                  onChange={this.handledate}
                 />
               </div>
 
@@ -116,7 +115,9 @@ class Meetings extends Component {
           </div>
         </div>
 
-        <div className="side">fdnls</div>
+        <div className="side">
+          <MeetingDisplay data={this.state.data_server} />
+        </div>
       </div>
     );
   }

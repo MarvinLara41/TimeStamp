@@ -33,15 +33,15 @@ const UserSchema = new Schema({
   ]
 });
 
-//hasing password returning a hashed password
-// UserSchema.methods.generateHash = function(password) {
-//   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-// };
+// hasing password returning a hashed password
+UserSchema.methods.generateHash = function(password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
 
 //
-// UserSchema.methods.validPassword = function(password) {
-//   return bcrypt.compareSync(password, this.password);
-// };
+UserSchema.methods.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
 
 const user = mongoose.model("user", UserSchema);
 
