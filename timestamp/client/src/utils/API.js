@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default {
   signIn: function(type, callback) {
-    let URL = "/api/signIn/account/signIn"; // change to sign in
+    let URL = "/api/signIn/signIn"; // change to sign in
 
     axios
       .post(URL, {
@@ -134,5 +134,18 @@ export default {
       .catch(function(error) {
         console.log(error);
       });
-  }
+  },
+
+
+sendEmail:function (type, callback) {
+    let URL = "/api/email"     // email api route sent to client
+      axios.post(URL, {                    
+             email: type.email,               
+             message: type.message
+      }).then(function (response) {
+      callback(response)
+      }).catch(function (error) {
+        console.log(error)
+      })
+    }
 };

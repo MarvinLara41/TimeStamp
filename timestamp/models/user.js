@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 
 const Schema = mongoose.Schema;
 //this file is for the creation of the user on the database.

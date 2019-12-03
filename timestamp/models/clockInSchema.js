@@ -21,5 +21,5 @@ const clockSchema = new Schema({
 
 const addClock = mongoose.model("clock", clockSchema);
 
-module.exports= clockIn;
+module.exports= addClock;
 

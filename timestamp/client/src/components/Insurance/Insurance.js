@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./index.css";
 
+{/* <div class="nav_top"><nav class="navbar navbar-expand navbar-dark bg-dark"><a href="#home" class="navbar-brand">Time||Stamp</a></nav></div> */}
 class Insurance extends Component {
   constructor(props) {
     super(props);
@@ -78,9 +80,11 @@ class Insurance extends Component {
 
   render() {
     return (
-      <div>
+
+     
+      <div className = "table">
         <form onSubmit={this.handleSubmit}>
-          <h1>Your Insurance Information</h1>
+          <h1>Insurance Information</h1>
           <input
             type="text"
             value={this.firstName}
@@ -143,11 +147,17 @@ class Insurance extends Component {
             onChange={this.phoneNumber}
           />
 
-          <button>Submit</button>
+<button type="submit" className="btn btn-success" id="sudmit1">
+              submit
+            </button>
         </form>
       </div>
+       
+       
     );
   }
 }
 
+
 export default Insurance;
+

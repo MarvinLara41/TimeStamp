@@ -16,6 +16,15 @@ module.exports = {
         date,
     } = body;
  
+    const payStub = new payStub();
+
+    payStub.fullName = fullName;
+    payStub.title = title;
+    payStub.hoursWorked = hoursWorked;
+    payStub.payRate = payRate;
+    payStub.payOut = payOut;
+    payStub.date = date;
+
 
 
  payStub.aggregate([

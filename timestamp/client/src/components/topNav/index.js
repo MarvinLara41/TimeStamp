@@ -22,6 +22,8 @@ class NavMain extends Component {
     </Navbar.Brand>
   </Navbar>
 </>
+
+
            
          );
     }

@@ -74,6 +74,7 @@ class PayStub extends Component {
     render(){
        
         return(
+            
                 <div className="displyPay">
                         <h2> Enter your Employee ID to view your most recent Pay Statement </h2>
                         <input 

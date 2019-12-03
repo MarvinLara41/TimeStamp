@@ -1,4 +1,5 @@
 const insurance = require ('../models/profile');
+// const insurance = require ('../models/insuranceSchema')
 
 
 //Used to get insurances from database
@@ -17,6 +18,14 @@ module.exports = {
        phoneNumber
     } = body;
  
+    const insurance = new insurance();
+    insurance.firstName = firstName;
+    insurance.lastName = lastName;
+    insurance.email = email;
+    insurance.insuranceName = insuranceName;
+    insurance.dependencies = dependencies;
+    insurance.insuranceId = insuranceId;
+    insurance.phoneNumber = phoneNumber;
 
 
  insurance.aggregate([
@@ -40,4 +49,4 @@ module.exports = {
         console.log(JSON.stringify(show)); //if using postman the return will be rendered in terminal
  }) 
 }
-}
+};
