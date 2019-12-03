@@ -84,6 +84,7 @@ class PayStub extends Component {
                          placeholder="Employee ID"
                          onChange= {this.handleChangeUserId}
                         />
+                        <br />
                         <button onSubmit={this.handleSubmit}>Submit</button>
                     <br />
                     <ul>

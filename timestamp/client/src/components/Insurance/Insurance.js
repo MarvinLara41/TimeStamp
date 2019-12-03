@@ -84,7 +84,7 @@ class Insurance extends Component {
      
       <div className = "table">
         <form onSubmit={this.handleSubmit}>
-          <h1>Insurance Information</h1>
+          <h2>Insurance Information</h2>
           <input
             type="text"
             value={this.firstName}
@@ -146,6 +146,7 @@ class Insurance extends Component {
             placeholder="Phone Number"
             onChange={this.phoneNumber}
           />
+          <br />
 
 <button type="submit" className="btn btn-success" id="sudmit1">
               submit

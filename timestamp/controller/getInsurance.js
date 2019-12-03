@@ -39,6 +39,13 @@ module.exports = {
               });
           }
 
+          function (req, res) {
+              insurance.find().then(data => {
+                  console.log(data);
+                  res.send(data);
+              })
+          }
+          
     // return res.send({
     //             success: true,
     //             message: 'User insurance',
