@@ -5,13 +5,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
-
 .env
-
 
 # testing
 /coverage
+
 
 # production
 /build
@@ -34,8 +32,7 @@ node_modules/
 dist/
 
 # Config file
-config/config.js
-/config
+config/config.js/config
 # Node stuff
 node_modules
 .npm
