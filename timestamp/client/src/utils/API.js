@@ -149,5 +149,61 @@ export default {
       .catch(function(error) {
         console.log(error);
       });
+  },
+  sendEmail: function(type, callback) {
+    let URL = "/api/email/email"; // email api route sent to client
+
+    axios
+      .post(URL, {
+        email: type.email,
+        message: type.message
+      })
+      .then(function(response) {
+        callback(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  },
+
+  getPayStub: function(type, callback) {
+    let URL = "/api/getPay/getPay";
+
+    axios
+      .get(URL, {
+        fullName: type.fullName,
+        title: type.title,
+        hoursWorked: type.hoursWorked,
+        payRate: type.payRate,
+        payOut: type.payOut,
+        date: type.date
+      })
+      .then(function(response) {
+        callback(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  },
+
+  getInsurance: function(type, callback) {
+    let URL = "/api/getInsurance/getInsurance";
+
+    axios
+      .get(URL, {
+        firstName: type.firstName,
+        lastName: type.lastName,
+        email: type.email,
+        insuranceName: type.insuranceName,
+        dependecies: type.dependecies,
+        insuranceId: type.insuranceId,
+        phoneNumber: type.phoneNumber
+      })
+      .then(function(response) {
+        callback(response);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
   }
 };

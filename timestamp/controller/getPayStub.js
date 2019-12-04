@@ -7,7 +7,7 @@ module.exports = {
     getPayStub: function(req, res) {
         const {body} = req;
     //enter the data we want into the body
-    const {
+    let {
         fullName,
         title,
         hoursWorked,
@@ -29,14 +29,11 @@ module.exports = {
               });
           }
     
-        // return res.send({
-        //     success: true,
-        //     message: 'User payCheck',
-        //     token: stub._id  //this is the unique user id in mongodb
-        //                           //the database idenitfys a user based off this token
-        //                           //it can also be used to delete the user
-        // })
-        console.log(JSON.stringify(stub)); //data is shown in the terminal
+        return res.send({
+            message:"Success!",
+            value:JSON.stringify(stub)
+        })
+        
               
 
  }) 

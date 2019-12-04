@@ -5,6 +5,8 @@ import UserSide from "../../components/userInfoSidenav/index";
 import ClockIn from "../../components/clockIn/index";
 import Meetings from "../../components/meetings";
 import ClockDisplay from "../../components/time";
+import Insurance from "../../components/Insurance/Insurance";
+import PayStub from "../../components/payStub/PayStub";
 import API from "../../utils/API";
 import "./index.css";
 
@@ -15,6 +17,8 @@ class DashBoard extends Component {
       clock: true,
       appointment: false,
       calender: false,
+      insurance: false,
+      payStubs: false,
       firstName: "",
       lastName: "",
       image: "",
@@ -23,8 +27,8 @@ class DashBoard extends Component {
     this.clockIn = this.clockIn.bind(this);
     this.appointment = this.appointment.bind(this);
     this.calender = this.calender.bind(this);
-    // this.payStubs = this.payStubs.bind(this);
-    // this.insurance = this.insurance.bind(this);
+    this.payStubs = this.payStubs.bind(this);
+    this.insurance = this.insurance.bind(this);
   }
 
   componentDidMount() {
@@ -50,7 +54,9 @@ class DashBoard extends Component {
       this.setState({
         clock: true,
         appointment: false,
-        calender: false
+        calender: false,
+        insurance: false,
+        payStubs: false
       });
     }
     console.log("appointment");
@@ -61,7 +67,9 @@ class DashBoard extends Component {
       this.setState({
         clock: false,
         appointment: true,
-        calender: false
+        calender: false,
+        insurance: false,
+        payStubs: false
       });
     }
     console.log("appointment");
@@ -72,26 +80,35 @@ class DashBoard extends Component {
       this.setState({
         calender: true,
         clock: false,
-        appointment: false
+        appointment: false,
+        insurance: false,
+        payStubs: false
       });
     }
     console.log("calender");
   }
 
-  // payStubs() {
-  //   this.setState({
-  //     showComponent: true
-  //   });
-  //   console.log("payStubs");
-  // }
+  payStubs() {
+    this.setState({
+      insurance: false,
+      calender: false,
+      clock: false,
+      appointment: false,
+      payStubs: true
+    });
+  }
 
-  // insurance() {
-  //   this.setState({
-  //     showComponent: true
-  //   });
+  insurance() {
+    this.setState({
+      insurance: true,
+      calender: false,
+      clock: false,
+      appointment: false,
+      payStubs: false
+    });
 
-  //   console.log("insurance");
-  // }
+    console.log("insurance");
+  }
 
   render() {
     return (
@@ -133,8 +150,12 @@ class DashBoard extends Component {
                 <li onClick={this.calender} className="sidenav__list-item">
                   Calender
                 </li>
-                <li className="sidenav__list-item">PayStubs</li>
-                <li className="sidenav__list-item">insurances</li>
+                <li onClick={this.payStubs} className="sidenav__list-item">
+                  PayStubs
+                </li>
+                <li onClick={this.insurance} className="sidenav__list-item">
+                  insurances
+                </li>
               </ul>
             </aside>
           </div>
@@ -146,6 +167,8 @@ class DashBoard extends Component {
           {this.state.clock ? <ClockIn /> : null}
           {this.state.appointment ? <Meetings /> : null}
           {this.state.calender ? <Table1 /> : null}
+          {this.state.insurance ? <Insurance /> : null}
+          {this.state.payStubs ? <PayStub /> : null}
         </div>
       </div>
     );
