@@ -1,0 +1,60 @@
+{
+  "name": "MERN",
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "MERN",
+  "author": "Luis, Robert, David, Marv",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarvinLara41/TimeStamp.git"
+  },
+  "license": "ISC",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && yarn run start:prod || yarn run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn run client\"",
+    "client": "cd client && yarn run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && yarn install",
+    "build": "cd client && yarn run build",
+    "heroku-postbuild": "yarn run build"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "proxy": "http://localhost:5000/",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
+    "@types/node": "^12.12.8",
+    "@types/nodemailer": "^6.2.2",
+    "@types/nodemon": "^1.19.0",
+    "@types/react-bootstrap": "^0.32.20",
+    "@types/react-input-calendar": "0.0.35",
+    "@types/whatwg-fetch": "0.0.33",
+    "axios": "^0.18.1",
+    "bcrypt": "^3.0.6",
+    "concurrently": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "global": "^4.4.0",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.7.11",
+    "nodemailer": "^6.3.1",
+    "nodemon": "^2.0.1",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-bootstrap-sidebar": "^0.0.1",
+    "react-dom": "^16.11.0",
+    "react-input-calendar": "^0.5.4",
+    "tsutils": "3.17.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,110 @@
+.meeting {
+  width: 900px;
+  height: 560px;
+  margin-top: -80px;
+  margin-left: 10px;
+  position: relative;
+  left: 400px;
+  top: -250px;
+  padding: 3%;
+  overflow: scroll;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.clockdisplay {
+  margin-left: 600px;
+  margin-top: -100px;
+  height: 100px;
+  width: 500px;
+  background-color: rgb(230, 212, 246);
+  text-align: center;
+  box-shadow: 50px 40px 50px 0 rgba(0, 0, 0, 0.2),
+    0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.user_info1 {
+  margin-top: -100px;
+  width: 300px;
+  height: 600px;
+  background-color: rgb(247, 250, 255);
+
+  font-size: 50px;
+}
+
+.logout {
+  margin-left: 93%;
+  border-radius: 30px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.table1main {
+  margin-top: -400px;
+  margin-left: 300px;
+  /* max-width: 1000px; */
+}
+
+.main1 {
+  background-color: beige;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-image: url("https://i.redd.it/b3esnz5ra34y.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
+
+/* ********************************** SideNav  ******************************************* */
+
+.sidenav {
+  height: 600px;
+  width: 300px;
+  margin-bottom: -300px;
+  position: fixed;
+  margin-top: -190px;
+  overflow-y: auto;
+  transform: translateX(-245px);
+  transition: all 0.6s ease-in-out;
+  box-shadow: 0 5px 20px 0 rgba(65, 32, 32, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: #394263;
+}
+
+.sidenav.active {
+  transform: translateX(0);
+}
+
+.sidenav__close-icon {
+  /* position: absolute; */
+  /* visibility: visible; */
+  top: 15px;
+  /* right: 12px; */
+  cursor: pointer;
+  font-size: 20px;
+  color: #ddd;
+}
+
+.sidenav__list {
+  padding: 0;
+  margin-top: 100px;
+  list-style-type: none;
+}
+
+.sidenav__list-item {
+  padding: 20px 20px 20px 40px;
+  color: #ddd;
+}
+
+.sidenav__list-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.sidenav {
+  /* position: relative; */
+  transform: translateX(0);
+}
+
+.sidenav__close-icon {
+  visibility: hidden;
+}

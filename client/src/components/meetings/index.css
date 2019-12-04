@@ -1,0 +1,38 @@
+.meetings {
+  padding: 60px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 440px;
+  box-shadow: 50px 100px 20px 0 rgba(0, 0, 0, 0.2),
+    0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  align-items: center;
+}
+
+.side {
+  width: 530px;
+  height: 500px;
+  position: fixed;
+  margin-left: 290px;
+  margin-top: -450px;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+#sudmit1 {
+  width: 200px;
+}
+
+.field1 {
+  display: block;
+  margin: 0;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 100%;
+  font-family: inherit;
+  font-size: var(--inputFontSize);
+  font-weight: inherit;
+  line-height: var(--inputLineHeight);
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow var(--transitionDuration);
+}

@@ -1,0 +1,25 @@
+
+.table{
+   max-width: 800px;
+   max-height: 800px;
+   margin-left: 0px; 
+   margin-top:-20px ;
+   background: rgb(238, 238, 238);
+   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+   /* float:left; */
+
+   /* overflow: auto; */
+   
+
+}
+
+
+
+
+
+.head{
+   
+    margin-left: 350px;
+}
+
