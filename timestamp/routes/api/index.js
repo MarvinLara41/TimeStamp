@@ -9,7 +9,6 @@ const signUp =require('./signUp');
 const verify = require('./verify');
 const logOut = require('./logOut');
 const getAllUsers = require('./getAllUsers');
-
 const email = require('./email');
 const profile = require('./profile')
 const pay = require('./getPay');
@@ -26,8 +25,6 @@ router.use("/signup", signUp);
 router.use("/verify", verify);
 router.use("/logOut", logOut);
 router.use("/users", getAllUsers);
-
-
 router.use("/email", email);
 router.use("/profile", profile);
 router.use('/getPay', pay);

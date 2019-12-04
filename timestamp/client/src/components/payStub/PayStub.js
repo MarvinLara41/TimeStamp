@@ -1,19 +1,19 @@
 import React, {Component} from "react";
 import axios from 'axios';
-
+import API from "../../utils/API";
 class PayStub extends Component {
     constructor (props){
         super(props)
 
         this.state= {
-                userId: "",
+    
                 fullName: "",
                 title:"",
-                hoursWorked: [],
-                payRate: [],
-                payOut: [],
+                hoursWorked:"" ,
+                payRate:"" ,
+                payOut:"" ,
                 date: "",
-            
+                results: {}
         }
 
         this.handleSubmit =this.handleSubmit.bind(this)
@@ -26,73 +26,84 @@ class PayStub extends Component {
     }
 
      handleChangeFullName = (e) => {
-        this.setState({FullName: e.target.value})
+        this.setState({FullName: e.target.fullName})
     }
 
      handleChangeTitle = (e) => {
-        this.setState({Title: e.target.value})
+        this.setState({Title: e.target.title})
     }
 
      handleChangeHoursWorked = (e) => {
-        this.setState({hoursWorked: e.target.value}) 
+        this.setState({hoursWorked: e.target.hoursWorked}) 
     }
 
      handleChangePayRate = (e) => {
-        this.setState({payRate: e.target.value}) 
+        this.setState({payRate: e.target.payRate}) 
     }
 
      handleChangePayOut = (e) => {
-        this.setState({payOut: e.target.value}) 
+        this.setState({payOut: e.target.payOut}) 
     }
 
      handleChangeDate = (e) => {
-        this.setState({date: e.target.value})
-    }
-
-    handleChangeUserId = (e) => {
-        this.setState({userId: e.target.value})
+        this.setState({date: e.target.date})
     }
 
 
-    async handleSubmit(e){
+
+     async handleSubmit(e){
             e.preventDefault()
 
-            const { fullName, title, hoursWorked, payRate, payOut, date} =this.state
-            const form = await axios.post('/api/payStub/payStub', {
-                fullName, 
-                title, 
-                hoursWorked, 
-                payRate, 
-                payOut, 
-                date
+
+            API.getPayStub(this.state, callback=>{
+               
+                    console.log(JSON.stringify(callback.data.value))
+                 alert(JSON.stringify(callback.data.value))
             })
 
-                console.log(this.state);
-                
+         
     }
 
     render(){
        
         return(
                 <div className="displyPay">
-                        <h2> Enter your Employee ID to view your most recent Pay Statement </h2>
-                        <input 
-                         type="text"
-                         value={this.userId}
-                         name="userId"
-                         placeholder="Employee ID"
-                         onChange= {this.handleChangeUserId}
-                        />
-                        <button onSubmit={this.handleSubmit}>Submit</button>
+
+                <form className="table" onSubmit={this.handleSubmit}>
+
+                        <button>View my Check</button>
                     <br />
-                    <ul>
-                            <il value={this.fullName}>Full Name:{this.fullName}</il><br />
-                            <il value={this.title}>Title: {this.title}</il><br />
-                            <il value={this.hoursWorked}> Hours Worked: {this.hoursWorked}</il><br />
-                            <il value={this.payRate}>Pay-Rate: {this.payRate}</il><br />
-                            <il value={this.payOut}>Pay-Out: {this.payOut}</il><br />
-                            <il value={this.date}>Date: {this.date}</il>
-                    </ul>
+                            <p type="text" 
+                            value={this.fullName}
+                            onChange= {this.handleChangeFullName}
+                            ></p>
+                            <br />
+                            <p type="text"
+                            value={this.title}
+                            onChange={this.handleChangeTitle}
+                            ></p>
+                            <br />
+                            <p type="text"
+                            value={this.hoursWorked}
+                            onChange={this.handleChangeHoursWorked}
+                            > </p>
+                            <br />
+                            <p type="text"
+                            value={this.payRate}
+                            onChange={this.handleChangePayRate}
+                            ></p>
+                            <br />
+                            <p type="text"
+                            value={this.payOut}
+                            onChange={this.handleChangePayOut}
+                            ></p>
+                            <br />
+                            <p type="text"
+                            value={this.date}
+                            onChange={this.handleChangeDate}
+                            ></p>
+                            <br />
+                    </form>
                 </div>
         )
     }

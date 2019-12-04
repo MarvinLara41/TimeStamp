@@ -5,7 +5,7 @@ const profile = require('../models/profile');
 
 module.exports = {
     sign_In: function(req, res) {
-//Sign up post request can be checked with postman using the post "/api/account/signup"
+
       //everything under this post request is connected to userSession.js
       const {body} = req;
       const {
