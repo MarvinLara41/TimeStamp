@@ -4,6 +4,7 @@ import Table1 from "../../components/table1/table";
 import UserSide from "../../components/userInfoSidenav/index";
 import ClockIn from "../../components/clockIn/index";
 import Meetings from "../../components/meetings";
+import ClockDisplay from "../../components/time";
 import API from "../../utils/API";
 import "./index.css";
 
@@ -111,7 +112,9 @@ class DashBoard extends Component {
               </div>
 
               <div>
-                <div></div>
+                <div className="clockdisplay">
+                  <ClockDisplay />
+                </div>
               </div>
             </div>
 

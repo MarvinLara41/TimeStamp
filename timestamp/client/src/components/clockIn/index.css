@@ -1,23 +1,26 @@
 .main_1 {
   width: 820px;
   height: 470px;
-  background-color: rgb(252, 252, 255);
+  /* background-color: rgb(252, 252, 255); */
   opacity: 0.8;
   padding: 10px;
   border-radius: 15px;
 }
 
 .button_main {
-  margin-left: 310px;
+  margin-left: 200px;
+  width: 400px;
 }
 
 .clockmain1 {
-  margin-left: 300px;
+  margin-left: 150px;
+  background: #f9f9f9;
+
+  border-left: 5px solid #003842;
+  border-right: 5px solid #2cc8e4;
+  width: 500px;
 }
 
 .clock_info {
-  width: 800px;
-  height: 300px;
-  margin-top: 10px;
-  background-color: rgb(255, 255, 255);
+  margin-left: -40px;
 }

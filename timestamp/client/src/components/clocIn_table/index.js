@@ -8,32 +8,21 @@ class ClockTable extends Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data1 } = this.props;
+    const names = data1.map(usermain => {
+      return (
+        <div className="sideone">
+          <ul id="list">
+            <li className="in" key={usermain._id}>
+              {usermain.punchOut}
+              {usermain.date}
+            </li>
+          </ul>
+        </div>
+      );
+    });
 
-    console.log(data);
-
-    return <></>;
+    return <h1>{names}</h1>;
   }
 }
 export default ClockTable;
-
-// <div className="sideone">
-// <div id="item-list">
-//   <ul>
-//     <li>
-//       <a className="expand">
-//         <div className="icon london"></div>
-//         <h2>punchIn</h2>
-//         <span>Lorem ipsum dolor sit amet</span>
-//       </a>
-//     </li>
-//     <li>
-//       <a className="expand">
-//         <div className="icon london"></div>
-//         <h2>punchout</h2>
-//         <span>Lorem ipsum dolor sit amet</span>
-//       </a>
-//     </li>
-//   </ul>
-// </div>
-// </div>

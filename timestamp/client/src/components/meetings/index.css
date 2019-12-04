@@ -2,19 +2,37 @@
   padding: 60px;
   background-color: rgb(255, 255, 255);
   width: 300px;
-  height: 400px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  height: 440px;
+  box-shadow: 50px 100px 20px 0 rgba(0, 0, 0, 0.2),
+    0 5px 5px 0 rgba(0, 0, 0, 0.24);
   align-items: center;
 }
 
 .side {
-  width: 600px;
+  width: 530px;
   height: 500px;
-  background-color: rgb(255, 255, 255);
-  margin-left: 310px;
-  margin-top: -420px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  margin-left: 290px;
+  margin-top: -450px;
   overflow: scroll;
   border-radius: 5px;
-  align-items: center;
+}
+
+#sudmit1 {
+  width: 200px;
+}
+
+.field1 {
+  display: block;
+  margin: 0;
+  padding: var(--inputPaddingV) var(--inputPaddingH);
+  color: inherit;
+  width: 100%;
+  font-family: inherit;
+  font-size: var(--inputFontSize);
+  font-weight: inherit;
+  line-height: var(--inputLineHeight);
+  border: none;
+  border-radius: 0.4rem;
+  transition: box-shadow var(--transitionDuration);
 }

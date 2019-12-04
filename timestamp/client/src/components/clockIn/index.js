@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 import "./index.css";
 import ClockTable from "../clocIn_table/index";
 import API from "../../utils/API";
@@ -9,7 +10,7 @@ class ClockIn extends Component {
     super(props);
     this.state = {
       input1: "",
-      request: ""
+      request: []
     };
 
     this.submitForm = this.submitForm.bind(this);
@@ -64,8 +65,7 @@ class ClockIn extends Component {
         <hr />
 
         <div className="clock_info">
-          <br />
-          <ClockTable data={this.state.request} />
+          <ClockTable data1={this.state.request} />
         </div>
       </div>
     );

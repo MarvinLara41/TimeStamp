@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Router } from "react-router-dom";
+
 import "./index.css";
 
 class MeetingDisplay extends Component {
@@ -11,28 +13,22 @@ class MeetingDisplay extends Component {
     const { data } = this.props;
     const names = data.map(usermain => {
       return (
-        <div class="card text-center" key={usermain._id}>
-          <div class="card-header">Apponintment</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              <div class="btn btn-primary">
+        <>
+          <ul>
+            <div className="list11">
+              <div key={usermain._id}>
                 {usermain.user1} AND {usermain.user2}
+                <hr />
               </div>
-            </h5>
-
-            <p class="card-text">{usermain.event}</p>
-          </div>
-          <div class="card-footer text-muted">{usermain.event_date}</div>
-        </div>
-
-        // <li className="lists" key={usermain._id}>
-        //   {`users: ${usermain.user1}  ${usermain.user2} event${usermain.event} event ${usermain.date}`}
-        //   <hr />
-        // </li>
+              <p>{usermain.event}</p>
+              <hr />
+              <div>{usermain.event_date}</div>
+              <hr />
+            </div>
+          </ul>
+        </>
       );
     });
-
-    console.log("THIS DISPLAY ALL MEETINGS", this.props);
 
     return (
       <div className="sideone">
