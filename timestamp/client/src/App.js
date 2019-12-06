@@ -55,8 +55,6 @@ constructor (props) {
 // }
 
 
-
-
 render() {
   console.log(this.state.token)
 // check to see if the user is auth before allowin to see info
