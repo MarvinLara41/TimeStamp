@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import LogOutButton from "../../components/logoutbutton/index";
+
 import Table1 from "../../components/table1/table";
 import UserSide from "../../components/userInfoSidenav/index";
 import ClockIn from "../../components/clockIn/index";
@@ -7,8 +7,13 @@ import Meetings from "../../components/meetings";
 import ClockDisplay from "../../components/time";
 import Insurance from "../../components/Insurance/Insurance";
 import PayStub from "../../components/payStub/PayStub";
+import NavMain from "../../components/topNav/index"
 import API from "../../utils/API";
 import "./index.css";
+
+// icons from font awesome
+import { FaRegClock, FaRegCalendarCheck, FaRegCalendar, FaRegMoneyBillAlt, FaAccessibleIcon } from 'react-icons/fa';
+
 
 class DashBoard extends Component {
   constructor(props) {
@@ -112,48 +117,60 @@ class DashBoard extends Component {
 
   render() {
     return (
-      <div className="main1">
-        <div className="logout">
-          <LogOutButton />
-        </div>
+     <>
+      <>
+      <NavMain />
+      </>
+
+
+        <div className="clockdisplay">
+                  <ClockDisplay />
+             
+                </div>
 
         <div>
-          <div className="sidemain">
-            <div className="user_info1">
+
+           <div className="container">
+          <div className="sidemain"></div>
+            <div className="user_info1">  <div>
               <div className="name_info">
                 <UserSide
                   firstName={this.state.firstName}
                   email={this.state.email}
                   image={this.state.image}
                 />
-              </div>
+              
 
-              <div>
-                <div className="clockdisplay">
-                  <ClockDisplay />
-                </div>
+            
+               
               </div>
             </div>
 
-            <div className="cardmain"></div>
             <aside className="sidenav">
               <div className="sidenav__close-icon">
                 <i className="fas fa-times sidenav__brand-close"></i>
               </div>
-              <ul className="sidenav__list">
+              <ul  className="sidenav__list">
                 <li onClick={this.clockIn} className="sidenav__list-item">
+                <FaRegClock className="icon" />
+               
                   clock-In
                 </li>
                 <li onClick={this.appointment} className="sidenav__list-item">
+                <FaRegCalendar className="icon"  />
                   Appointments
+           
                 </li>
                 <li onClick={this.calender} className="sidenav__list-item">
+                <FaRegCalendarCheck className="icon" />
                   Calender
                 </li>
                 <li onClick={this.payStubs} className="sidenav__list-item">
+                  <FaRegMoneyBillAlt className="icon" />
                   PayStubs
                 </li>
                 <li onClick={this.insurance} className="sidenav__list-item">
+                  <FaAccessibleIcon className="icon" />
                   insurances
                 </li>
               </ul>
@@ -170,7 +187,12 @@ class DashBoard extends Component {
           {this.state.insurance ? <Insurance /> : null}
           {this.state.payStubs ? <PayStub /> : null}
         </div>
-      </div>
+ 
+
+
+</div>
+
+</>
     );
   }
 }

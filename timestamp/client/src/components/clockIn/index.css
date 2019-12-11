@@ -1,8 +1,7 @@
 .main_1 {
   width: 820px;
   height: 470px;
-  /* background-color: rgb(252, 252, 255); */
-  opacity: 0.8;
+  background-color: rgb(252, 252, 255);
   padding: 10px;
   border-radius: 15px;
 }
@@ -14,8 +13,6 @@
 
 .clockmain1 {
   margin-left: 150px;
-  background: #f9f9f9;
-
   border-left: 5px solid #003842;
   border-right: 5px solid #2cc8e4;
   width: 500px;

@@ -4,16 +4,9 @@ import Login from "./pages/LoginPage/Login";
 
 import DashBoard from "./pages/dashboard/index";
 
-// import Email from "./components/Email/Email"
-
-// import PayStub from "./components/payStub/PayStub"
-
 import Insurance from "./components/Insurance/Insurance"
 
 import { BrowserRouter as Router, Switch, Route, Redirect} from "react-router-dom";
-
-
-// import { withRouter } from 'react-router-dom';
 
 // check to see if there is a token in local storage
 
@@ -49,10 +42,10 @@ constructor (props) {
 
 
 
-// handleSuccessfulAuth(){
+handleSuccessfulAuth(){
+  this.props.history.push("/dashboard")
+}
 
-//   this.props.history.push("/dashboard")
-// }
 
 
 render() {
@@ -73,7 +66,8 @@ render() {
       <div>
         <Switch>
         <Route exact  path="/"  component ={Login} />}  />
-        <PrivateRoute exact  path="/dashboard" component={DashBoard}  />
+        {/* PrivateRoute */}
+        < PrivateRoute exact  path="/dashboard" component={DashBoard}  /> 
         {/* <Email /> */}
         {/* <PayStub /> */}
         <Insurance />

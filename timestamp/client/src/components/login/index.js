@@ -74,6 +74,9 @@ class FormMain extends Component {
 
   render() {
     return (
+      <div className="container">
+<div className="picture11"></div>
+
       <div className="main">
         <h1>Login</h1>
 
@@ -108,6 +111,9 @@ class FormMain extends Component {
             </button>
           </form>
         </div>
+      </div>
+
+
       </div>
     );
   }

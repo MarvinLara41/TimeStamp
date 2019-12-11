@@ -59,7 +59,7 @@ class PayStub extends Component {
 
   render() {
     return (
-      <div className="displyPay">
+      <div className="displyPay p-3 mb-2 bg-secondary text-white">
         <form className="table" onSubmit={this.handleSubmit}>
           <button className="btn11 btn btn-success">View my Check</button>
           <br />

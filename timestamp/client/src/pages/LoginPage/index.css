@@ -3,32 +3,35 @@ body {
   font-weight: 100;
   font-size: 12px;
   line-height: 30px;
-  color: #777;
-  background: rgb(255, 255, 255);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background: #ffffff;
   font-family: "Trebuchet MS", sans-serif;
+
 }
+
+
 
 .wall {
-  background-color: rgb(255, 255, 255);
-  position: fixed;
+
   height: 100%;
   width: 100%;
+  
   /* background-image: url("https://i.redd.it/b3esnz5ra34y.jpg"); */
+  /* background: rgba(255, 255, 255, 0.5); */
   background-repeat: no-repeat;
   background-position: right top;
-  background-attachment: fixed;
+
 }
 
+
+
 .center1 {
-  height: 500px;
-  width: 350px;
+  height: 600px;
+  width: 290px;
   margin: auto;
+  border-radius: 100px;
   margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  max-width: 400px;
-  width: 100%;
-  position: relative;
+  margin-left: 710px;
+  background-color: #92A8D1;
+
+
 }

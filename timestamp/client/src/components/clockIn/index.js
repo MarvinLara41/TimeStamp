@@ -46,9 +46,9 @@ class ClockIn extends Component {
             value={this.state.input1}
             onChange={this.handleInputChange}
             name="clock101"
-            className="clockmain1"
+           className="clockmain1 p-3 mb-2 bg-primary text-white"
           >
-            <option value="Breake">Breake</option>
+            <option value="Breake">Break</option>
             <option value="Lunch">Lunch</option>
             <option value="PunchIn" selected>
               PunchIn

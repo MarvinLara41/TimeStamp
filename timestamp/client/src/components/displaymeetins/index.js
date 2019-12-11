@@ -15,7 +15,7 @@ class MeetingDisplay extends Component {
       return (
         <>
           <ul>
-            <div className="list11">
+            <div className="list11 p-3 mb-2 bg-secondary text-white" >
               <div key={usermain._id}>
                 {usermain.user1} AND {usermain.user2}
                 <hr />

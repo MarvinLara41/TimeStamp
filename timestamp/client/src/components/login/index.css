@@ -1,15 +1,28 @@
 .main {
-  width: 300px;
-  height: 450px;
-  border-radius: 2px;
-  margin: auto;
-  padding: 50px;
-  background: inherit;
-  border-radius: 2px;
-  background: #f9f9f9;
-  padding: 70px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  align-items: center;
+  width: 350px;
+  height: 500px;
+  border-radius: 5px;
+  background: #ffffff;
+  opacity: 0.9;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 90px;
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+.picture11{
+
+  margin-left: -300px;
+  margin-bottom: -650px;
+  border-radius: 10px;
+  background-image: url("https://media.giphy.com/media/eE0s0lpPeAU8g/giphy.gif");
+  box-shadow: 0 14px 28px rgba(230, 204, 204, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 550px;
+  height: 600px;
+  background-color: rgb(142, 255, 142);
+
 }
 
 .message {
@@ -21,8 +34,11 @@
 .field {
   width: 150px;
   height: 30px;
-  border: 1px solid #ccc;
+  /* border: 1px solid rgb(148, 148, 148); */
   background: #fff;
   margin: 0 0 5px;
   padding: 10px;
+  /* background: hsla(0,0,0,0.5);  50% transparent */
+
+
 }

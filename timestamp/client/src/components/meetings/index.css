@@ -1,11 +1,15 @@
 .meetings {
-  padding: 60px;
-  background-color: rgb(255, 255, 255);
-  width: 300px;
-  height: 440px;
-  box-shadow: 50px 100px 20px 0 rgba(0, 0, 0, 0.2),
+  padding: 50px;
+  width: 350px;
+  height: 540px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2),
     0 5px 5px 0 rgba(0, 0, 0, 0.24);
   align-items: center;
+  /* background-color: cyan; */
+}
+
+.event101{
+  height: 50px;
 }
 
 .side {
@@ -18,21 +22,122 @@
   border-radius: 5px;
 }
 
-#sudmit1 {
-  width: 200px;
-}
+
 
 .field1 {
-  display: block;
-  margin: 0;
-  padding: var(--inputPaddingV) var(--inputPaddingH);
-  color: inherit;
-  width: 100%;
-  font-family: inherit;
-  font-size: var(--inputFontSize);
-  font-weight: inherit;
-  line-height: var(--inputLineHeight);
-  border: none;
-  border-radius: 0.4rem;
-  transition: box-shadow var(--transitionDuration);
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:300;
+	font-size: 15px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 2px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+
+.field1:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#user1{
+	background-image: url(https://img.icons8.com/wired/64/000000/change-user-male.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#user2{
+	background-image: url(https://img.icons8.com/dusk/64/000000/change-user-male.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(https://img.icons8.com/color/48/000000/filled-sent.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#calender{
+	background-image: url(https://img.icons8.com/cotton/64/000000/planner.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+#events{
+	background-image: url(https://img.icons8.com/cute-clipart/64/000000/forward-message.png);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+
+
+.field1:focus, .field1:focus {
+background-color:white;
+}
+
+#name:focus{
+	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+.button-blue:hover{
+	background-color: rgba(0,0,0,0);
+	color: #0493bd;
+}
+
+
+#sudmit11 {
+  width: 300px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+
+
+#sudmit11:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+#sudmit11:hover .ease{
+  width:100%;
+  background-color:white;
 }

@@ -80,7 +80,7 @@ class Meetings extends Component {
   render() {
     return (
       <div>
-        <div className="meetings">
+        <div className="meetings p-3 mb-2 bg-secondary text-white">
           <br />
           <div>
             <div>{this.state.message.message}</div>
@@ -88,7 +88,7 @@ class Meetings extends Component {
             <form onSubmit={this.submitForm}>
               <br />
               <input
-                className="field1 "
+                id="user1"className="field1 "
                 type="text"
                 placeholder="user1"
                 value={this.state.user1}
@@ -96,6 +96,7 @@ class Meetings extends Component {
               />
 
               <input
+              id="user2"
                 className="field1"
                 type="text"
                 placeholder="user2"
@@ -103,15 +104,9 @@ class Meetings extends Component {
                 onChange={this.user2}
               />
 
+           
               <input
-                className="field1"
-                placeholder="event"
-                type="text"
-                value={this.state.date1}
-                onChange={this.handleUserEvent}
-              />
-
-              <input
+              id="email"
                 className="field1"
                 placeholder="email"
                 value={this.state.email}
@@ -120,15 +115,31 @@ class Meetings extends Component {
               <div>
                 <hr />
                 <DatePicker
+                id="calender"
                   className="field1 date11"
                   selected={this.state.event_date}
                   onChange={this.handledate}
                 />
               </div>
 
+<hr />
+
+              <input
+              id="events"
+                className="field1 event101"
+                placeholder="event"
+                type="text"
+                value={this.state.date1}
+                onChange={this.handleUserEvent}
+              />
+
+
+
+
+
               <br />
 
-              <button type="submit" className="btn btn-success" id="sudmit1">
+              <button type="submit" className=" bg-success" id="sudmit11">
                 submit
               </button>
             </form>

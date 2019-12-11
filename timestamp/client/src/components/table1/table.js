@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 
 import "./index.css"
 
-import { Inject,ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, EventSettingsModel } from "@syncfusion/ej2-react-schedule";
+import { Inject,ScheduleComponent, Day, Week, WorkWeek, Month, Agenda} from "@syncfusion/ej2-react-schedule";
 
 
 
-
+// , EventSettingsModel 
 
 
 
