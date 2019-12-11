@@ -11,13 +11,6 @@ import {
   EventSettingsModel
 } from "@syncfusion/ej2-react-schedule";
 
-<<<<<<< HEAD
-import "./index.css";
-
-// , EventSettingsModel
-
-=======
->>>>>>> master
 class Table1 extends Component {
   constructor(props) {
     super(props);
