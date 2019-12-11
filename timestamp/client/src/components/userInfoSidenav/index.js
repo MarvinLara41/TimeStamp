@@ -1,7 +1,6 @@
 import React from "react";
-import Figure from 'react-bootstrap/Figure'
+import Figure from "react-bootstrap/Figure";
 import "./index.css";
-
 
 function UserSide(props) {
   console.log(props);
@@ -30,19 +29,21 @@ function UserSide(props) {
         alt="userPicture"
       /> */}
 
-<Figure>
-  <Figure.Image
-  className="image1"
-    width={400}
-    height={150}
-    alt="171x180"
-    src="https://visualpharm.com/assets/691/Add%20User%20Male-595b40b65ba036ed117d3b1f.svg"
-  />
-
-
-
-</Figure>
-
+      <Figure>
+        <Figure.Image
+          // className="image1"
+          //   width={400}
+          //   height={150}
+          //   alt="171x180"
+          //   src="https://visualpharm.com/assets/691/Add%20User%20Male-595b40b65ba036ed117d3b1f.svg"
+          // />
+          className="image1"
+          src={props.image}
+          width={400}
+          height={150}
+          alt="userPicture"
+        />
+      </Figure>
 
       {/* <div className="info_1">
 

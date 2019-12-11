@@ -1,9 +1,10 @@
 .main_1 {
   width: 820px;
   height: 470px;
-  background-color: rgb(252, 252, 255);
+  /* background-color: rgb(37, 37, 131); */
   padding: 10px;
   border-radius: 15px;
+  overflow: scroll;
 }
 
 .button_main {

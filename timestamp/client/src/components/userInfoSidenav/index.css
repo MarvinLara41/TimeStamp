@@ -1,8 +1,8 @@
 .sideone1 {
-  width: 350px;
-  height: 320px;
-  margin-top: -120px;
-
+  width: 340px;
+  height: 350px;
+  margin-top: -8px;
+  margin-left: 10px;
 }
 /* 
 .info_1 {
@@ -16,8 +16,11 @@
   margin-bottom: -50px;
 } */
 
-.image1{
-  background-color: rgb(189, 189, 189);
+.image1 {
+  /* background-color: rgb(189, 189, 189); */
   height: 450px;
   width: 400px;
+  border: solid rgb(59, 59, 59);
+  margin-top: -201px;
+  border-radius: 5px;
 }

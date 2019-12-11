@@ -34,7 +34,7 @@ class Insurance extends Component {
     return (
       <div className="display">
         <form className="table" onSubmit={this.handleSubmit}>
-          <button className="btn11 btn btn-warning">
+          <button className=" btn11 btn btn-primary btn-lg btn-block">
             {" "}
             View my Insurance Info
           </button>

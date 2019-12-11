@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import API from "../../utils/API";
+import "./index.css";
 class PayStub extends Component {
   constructor(props) {
     super(props);
@@ -59,9 +60,11 @@ class PayStub extends Component {
 
   render() {
     return (
-      <div className="displyPay p-3 mb-2 bg-secondary text-white">
+      <div className="displyPay">
         <form className="table" onSubmit={this.handleSubmit}>
-          <button className="btn11 btn btn-success">View my Check</button>
+          <button className="btn11 btn btn-primary btn-lg btn-block btn-success">
+            View my Check
+          </button>
           <br />
           <p
             type="text"

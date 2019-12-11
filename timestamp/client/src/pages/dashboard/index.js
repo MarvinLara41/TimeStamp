@@ -7,13 +7,18 @@ import Meetings from "../../components/meetings";
 import ClockDisplay from "../../components/time";
 import Insurance from "../../components/Insurance/Insurance";
 import PayStub from "../../components/payStub/PayStub";
-import NavMain from "../../components/topNav/index"
+import NavMain from "../../components/topNav/index";
 import API from "../../utils/API";
 import "./index.css";
 
 // icons from font awesome
-import { FaRegClock, FaRegCalendarCheck, FaRegCalendar, FaRegMoneyBillAlt, FaAccessibleIcon } from 'react-icons/fa';
-
+import {
+  FaRegClock,
+  FaRegCalendarCheck,
+  FaRegCalendar,
+  FaRegMoneyBillAlt,
+  FaAccessibleIcon
+} from "react-icons/fa";
 
 class DashBoard extends Component {
   constructor(props) {
@@ -117,82 +122,66 @@ class DashBoard extends Component {
 
   render() {
     return (
-     <>
-      <>
-      <NavMain />
-      </>
-
-
-        <div className="clockdisplay">
-                  <ClockDisplay />
-             
-                </div>
-
+      <div className="container">
         <div>
-
-           <div className="container">
-          <div className="sidemain"></div>
-            <div className="user_info1">  <div>
-              <div className="name_info">
-                <UserSide
-                  firstName={this.state.firstName}
-                  email={this.state.email}
-                  image={this.state.image}
-                />
-              
-
-            
-               
+          <div className="topbro">
+            <NavMain />
+          </div>
+          <div className="clockdisplay">
+            <ClockDisplay />
+          </div>
+          <div>
+            <div className="sidemain"></div>
+            <div className="user_info1">
+              {" "}
+              <div>
+                <div className="name_info">
+                  <UserSide
+                    firstName={this.state.firstName}
+                    email={this.state.email}
+                    image={this.state.image}
+                  />
+                </div>
               </div>
+              <aside className="sidenav">
+                <div className="sidenav__close-icon">
+                  <i className="fas fa-times sidenav__brand-close"></i>
+                </div>
+                <ul className="sidenav__list">
+                  <li onClick={this.clockIn} className="sidenav__list-item">
+                    <FaRegClock className="icon" />
+                    clock-In
+                  </li>
+                  <li onClick={this.appointment} className="sidenav__list-item">
+                    <FaRegCalendar className="icon" />
+                    Appointments
+                  </li>
+                  <li onClick={this.calender} className="sidenav__list-item">
+                    <FaRegCalendarCheck className="icon" />
+                    Calender
+                  </li>
+                  <li onClick={this.payStubs} className="sidenav__list-item">
+                    <FaRegMoneyBillAlt className="icon" />
+                    PayStubs
+                  </li>
+                  <li onClick={this.insurance} className="sidenav__list-item">
+                    <FaAccessibleIcon className="icon" />
+                    insurances
+                  </li>
+                </ul>
+              </aside>
             </div>
-
-            <aside className="sidenav">
-              <div className="sidenav__close-icon">
-                <i className="fas fa-times sidenav__brand-close"></i>
-              </div>
-              <ul  className="sidenav__list">
-                <li onClick={this.clockIn} className="sidenav__list-item">
-                <FaRegClock className="icon" />
-               
-                  clock-In
-                </li>
-                <li onClick={this.appointment} className="sidenav__list-item">
-                <FaRegCalendar className="icon"  />
-                  Appointments
-           
-                </li>
-                <li onClick={this.calender} className="sidenav__list-item">
-                <FaRegCalendarCheck className="icon" />
-                  Calender
-                </li>
-                <li onClick={this.payStubs} className="sidenav__list-item">
-                  <FaRegMoneyBillAlt className="icon" />
-                  PayStubs
-                </li>
-                <li onClick={this.insurance} className="sidenav__list-item">
-                  <FaAccessibleIcon className="icon" />
-                  insurances
-                </li>
-              </ul>
-            </aside>
+          </div>
+          {/* render the page if the state is set to true */}
+          <div className="meeting">
+            {this.state.clock ? <ClockIn /> : null}
+            {this.state.appointment ? <Meetings /> : null}
+            {this.state.calender ? <Table1 /> : null}
+            {this.state.insurance ? <Insurance /> : null}
+            {this.state.payStubs ? <PayStub /> : null}
           </div>
         </div>
-
-        {/* render the page if the state is set to true */}
-
-        <div className="meeting">
-          {this.state.clock ? <ClockIn /> : null}
-          {this.state.appointment ? <Meetings /> : null}
-          {this.state.calender ? <Table1 /> : null}
-          {this.state.insurance ? <Insurance /> : null}
-          {this.state.payStubs ? <PayStub /> : null}
-        </div>
- 
-
-
-</div>
-
-</>
+      </div>
     );
   }
 }

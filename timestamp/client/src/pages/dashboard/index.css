@@ -1,72 +1,63 @@
-
-body{
-	width: 100%;
-	height: 100vh;
-  font-family: "Exo", sans-serif;
-  background-color:  rgb(238, 236, 236);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(223, 223, 223);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgb(255, 255, 255)),
+    to(#ffffff)
+  );
 }
 
-
-.container{
-margin-left: -30px;
-
+.container {
+  margin-left: -30px;
 }
-
 
 .meeting {
   width: 1100px;
   height: 650px;
-  margin-top: -300px;
+  margin-top: -650px;
   margin-left: 400px;
   padding: 5%;
   border-radius: 15px;
-  background-color: rgb(255, 255, 255);
- 
+  /* background-color: rgb(255, 255, 255); */
 }
 
-
-
-.clockdisplay{
+.clockdisplay {
   height: 100px;
   border-radius: 10px;
   width: 400px;
   margin-left: 700px;
-  font-size: 50px;
-  margin-top: -10px;
+  font-size: 60px;
+  margin-top: 30px;
   background-color: rgb(252, 252, 255);
   transition: all 0.6s ease-in-out;
 }
 
-
-.user_info1 {
-  margin-top: -80px;
-  width: 350px;
-  height: 500px;
-  font-size: 50px;
-
-}
-
-.icon{
+.icon {
   width: 42px;
   height: 42px;
-  /* background-color: crimson; */
 }
-
-/* .table1main {
-  margin-top: -400px;
-  margin-left: 300px;
-
-} */
-
 
 /* ********************************** SideNav  ******************************************* */
 
 .sidenav {
-  height: 485px;
+  height: 600px;
   width: 350px;
+  margin-top: -270px;
   transform: translateX(-245px);
   transition: all 0.6s ease-in-out;
-  background-color: #171d36;
+  background-color: #2d334e;
+}
+
+.topbro {
+  width: 2000px;
 }
 
 .sidenav__close-icon {

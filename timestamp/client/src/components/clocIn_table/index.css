@@ -6,14 +6,21 @@
   margin: 0.2em 0;
   padding: 0.7em 0.8em;
   list-style: none;
-  background-color: rgb(230, 212, 246);
-  border-left: 5px solid #003842;
+  background-color: #b6b2b2;
+  opacity: 0.9;
+  border-left: 5px solid #bbe9f1;
+  border-right: 5px solid #50cbe0;
   cursor: pointer;
-  color: #333;
+  color: rgb(0, 0, 0);
   position: relative;
   z-index: 2;
   text-align: center;
   font-size: small;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
 }
 
 .in:hover {
