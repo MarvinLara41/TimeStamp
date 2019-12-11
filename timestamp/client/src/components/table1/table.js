@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-import "./index.css";
-
 import {
   Inject,
   ScheduleComponent,
@@ -9,8 +7,11 @@ import {
   Week,
   WorkWeek,
   Month,
-  Agenda
+  Agenda,
+  EventSettingsModel
 } from "@syncfusion/ej2-react-schedule";
+
+import "./index.css";
 
 // , EventSettingsModel
 
@@ -33,10 +34,6 @@ class Table1 extends Component {
       }
     };
   }
-
-  //   componentDidMount(){
-
-  // }
 
   render() {
     return (

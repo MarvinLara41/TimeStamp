@@ -5,6 +5,7 @@
   padding: 10px;
   border-radius: 15px;
   overflow: scroll;
+  margin-left: 100px;
 }
 
 .button_main {
