@@ -11,10 +11,13 @@ import {
   EventSettingsModel
 } from "@syncfusion/ej2-react-schedule";
 
+<<<<<<< HEAD
 import "./index.css";
 
 // , EventSettingsModel
 
+=======
+>>>>>>> master
 class Table1 extends Component {
   constructor(props) {
     super(props);
@@ -34,11 +37,10 @@ class Table1 extends Component {
       }
     };
   }
-
   render() {
     return (
       <>
-        <div className="table1">
+        <div className="table">
           <ScheduleComponent
             currentView="Month"
             selectedDate={new Date(2019, 0, 11)}
