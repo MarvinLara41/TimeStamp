@@ -9,10 +9,9 @@ import {
   Week,
   WorkWeek,
   Month,
-  Agenda
+  Agenda,
+  EventSettingsModel
 } from "@syncfusion/ej2-react-schedule";
-
-// , EventSettingsModel
 
 class Table1 extends Component {
   constructor(props) {
@@ -33,15 +32,10 @@ class Table1 extends Component {
       }
     };
   }
-
-  //   componentDidMount(){
-
-  // }
-
   render() {
     return (
       <>
-        <div className="table1">
+        <div className="table">
           <ScheduleComponent
             currentView="Month"
             selectedDate={new Date(2019, 0, 11)}

@@ -88,7 +88,8 @@ class Meetings extends Component {
             <form onSubmit={this.submitForm}>
               <br />
               <input
-                id="user1"className="field1 "
+                id="user1"
+                className="field1 "
                 type="text"
                 placeholder="user1"
                 value={this.state.user1}
@@ -96,7 +97,7 @@ class Meetings extends Component {
               />
 
               <input
-              id="user2"
+                id="user2"
                 className="field1"
                 type="text"
                 placeholder="user2"
@@ -104,9 +105,8 @@ class Meetings extends Component {
                 onChange={this.user2}
               />
 
-           
               <input
-              id="email"
+                id="email"
                 className="field1"
                 placeholder="email"
                 value={this.state.email}
@@ -115,27 +115,23 @@ class Meetings extends Component {
               <div>
                 <hr />
                 <DatePicker
-                id="calender"
+                  id="calender"
                   className="field1 date11"
                   selected={this.state.event_date}
                   onChange={this.handledate}
                 />
               </div>
 
-<hr />
+              <hr />
 
               <input
-              id="events"
+                id="events"
                 className="field1 event101"
                 placeholder="event"
                 type="text"
                 value={this.state.date1}
                 onChange={this.handleUserEvent}
               />
-
-
-
-
 
               <br />
 

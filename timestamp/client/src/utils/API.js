@@ -150,21 +150,6 @@ export default {
         console.log(error);
       });
   },
-  sendEmail: function(type, callback) {
-    let URL = "/api/email/email"; // email api route sent to client
-
-    axios
-      .post(URL, {
-        email: type.email,
-        message: type.message
-      })
-      .then(function(response) {
-        callback(response);
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  },
 
   getPayStub: function(type, callback) {
     let URL = "/api/getPay/getPay";
