@@ -11,14 +11,16 @@ app.use(express.json());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
+  app.use(express.static(" public/index"));
 }
 
 // Add routes, both API and vie
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || mongo.mongoAtlas);
+mongoose.connect(process.env.MONGODB_URI || mongo.mongoAtlas, {
+  useNewUrlParser: true
+});
 
 // Start the API server
 app.listen(PORT, function() {
