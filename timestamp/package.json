@@ -36,7 +36,7 @@
     "@types/react-bootstrap": "^0.32.20",
     "@types/react-input-calendar": "0.0.35",
     "@types/whatwg-fetch": "0.0.33",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "bcrypt": "^3.0.6",
     "concurrently": "^5.0.0",
     "cors": "^2.8.5",
