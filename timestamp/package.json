@@ -48,7 +48,7 @@
     "if-env": "^1.0.4",
     "mongodb": "^3.4.0",
     "mongoose": "^5.8.0",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.16",
     "nodemon": "^2.0.1",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-bootstrap-sidebar": "^0.0.1",
